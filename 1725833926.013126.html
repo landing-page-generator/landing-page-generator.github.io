@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry Shampoo - Refresh Your Hair Instantly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Dry Shampoo" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#signup">Buy Now</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#benefits" class="block py-2 px-4 text-blue-500">Benefits</a>
+            <a href="#how-it-works" class="block py-2 px-4 text-blue-500">How It Works</a>
+            <a href="#testimonials" class="block py-2 px-4 text-blue-500">Testimonials</a>
+            <a href="#faq" class="block py-2 px-4 text-blue-500">FAQ</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Buy Now</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Refresh Your Hair Instantly</h1>
+            <p class="text-xl md:text-2xl">Experience the convenience of dry shampoo for clean, voluminous hair without water.</p>
+            <a href="#signup" class="cta-button mt-4">Buy Now</a>
+        </div>
+    </header>
+
+    <!-- Social Proof Section -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Trusted by Beauty Experts</h2>
+        <div class="flex justify-center space-x-8">
+            <img src="logo1.png" alt="Company 1" class="trusted-logo">
+            <img src="logo2.png" alt="Company 2" class="trusted-logo">
+            <img src="logo3.png" alt="Company 3" class="trusted-logo">
+            <img src="logo4.png" alt="Company 4" class="trusted-logo">
+        </div>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section id="benefits" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Why Choose Our Dry Shampoo?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">✨</div>
+                <h3 class="text-xl font-bold">Instant Refresh</h3>
+                <p>Revive your hair in seconds without the need for water. Perfect for busy mornings and on-the-go touch-ups.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🌿</div>
+                <h3 class="text-xl font-bold">Natural Ingredients</h3>
+                <p>Formulated with natural ingredients that are gentle on your scalp and hair, leaving it soft and manageable.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">💪</div>
+                <h3 class="text-xl font-bold">Volume Boost</h3>
+                <p>Adds volume and texture to your hair, making it look fuller and more styled without any residue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">How to Use Our Dry Shampoo</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="process-step">
+                <div class="process-icon">🔍</div>
+                <h3 class="text-xl font-bold">1. Shake Well</h3>
+                <p>Shake the can vigorously before each use to ensure the ingredients are well-mixed.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">👩‍🦱</div>
+                <h3 class="text-xl font-bold">2. Spray</h3>
+                <p>Hold the can 6-8 inches away from your roots and spray evenly, focusing on oily areas.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">💆‍♀️</div>
+                <h3 class="text-xl font-bold">3. Massage & Style</h3>
+                <p>Massage the product into your scalp with your fingers, then brush through and style as desired.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer1.jpg" alt="Customer 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"This dry shampoo is a lifesaver! My hair looks fresh and voluminous even on the busiest days."</p>
+                <p class="font-bold">Jane Doe</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer2.jpg" alt="Customer 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"I love the natural ingredients. It's gentle on my scalp and leaves no residue."</p>
+                <p class="font-bold">John Smith</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">How often can I use dry shampoo?</h3>
+                <p>You can use dry shampoo as often as needed to refresh your hair between washes. However, we recommend not using it more than twice a week to avoid product buildup.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Is dry shampoo suitable for all hair types?</h3>
+                <p>Yes, our dry shampoo is formulated to work well with all hair types, including straight, wavy, curly, and coily hair.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Will dry shampoo leave a white residue?</h3>
+                <p>Our dry shampoo is designed to leave no white residue when used as directed. Be sure to shake the can well and spray from the recommended distance.</p>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-4">Is it safe to use dry shampoo on color-treated hair?</h3>
+                <p>Yes, our dry shampoo is safe for color-treated hair and can help extend the life of your color by reducing the frequency of washes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Buy Now</h2>
+        <p class="text-gray-600 mb-8">Get your hands on our dry shampoo and refresh your hair instantly.</p>
+        <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+            <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded">
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Buy Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Dry Shampoo. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="mt-4">
+                <p>Made with <a href="https://landing-page-generator-tau.vercel.app" class="underline">LPG</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#signup" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Buy Now</a>
+    </div>
+</body>
+
+</html>
