@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50b3a2;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #2980b9 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .showcase {
+            min-height: 400px;
+            background: url('showcase.jpg') no-repeat 0 -400px;
+            text-align: center;
+            color: #fff;
+        }
+        .showcase h1 {
+            margin-top: 100px;
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+        .showcase p {
+            font-size: 20px;
+        }
+        .button {
+            display: inline-block;
+            color: #fff;
+            background: #e8491d;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #d74318;
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .features div {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1;
+            margin: 10px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #50b3a2;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Landing Page Generator</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="showcase">
+        <div class="container">
+            <h1>Create Stunning Landing Pages Effortlessly</h1>
+            <p>With our Landing Page Generator, you can create professional landing pages in minutes without any coding knowledge.</p>
+            <a href="#features" class="button">Learn More</a>
+        </div>
+    </div>
+
+    <section id="features" class="container">
+        <h2>Features</h2>
+        <div class="features">
+            <div>
+                <h3>Easy to Use</h3>
+                <p>User-friendly interface that allows you to create landing pages quickly and easily.</p>
+            </div>
+            <div>
+                <h3>Customizable</h3>
+                <p>Customize your landing page with various templates and design options.</p>
+            </div>
+            <div>
+                <h3>Responsive Design</h3>
+                <p>All landing pages are mobile-friendly and look great on any device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Us</h2>
+        <p>We are a team of passionate developers and designers committed to making web development accessible to everyone. Our Landing Page Generator is designed to help you create beautiful and functional landing pages with ease.</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need support, please feel free to reach out to us at support@landingpagegenerator.com.</p>
+    </section>
+
+    <footer>
+        <p>Made with <a href="https://landing-page-generator-tau.vercel.app">LPG</a></p>
+    </footer>
+</body>
+</html>
