@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Emporium - Your One-Stop Shop for All Things Basketball</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF6B6B;
+            --secondary-color: #4A90E2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #50E3C2;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://example.com/hero-background.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #3cd3a7;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Basketball Emporium"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#process">How It Works</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#products" class="block py-2 px-4 text-blue-500">Products</a>
+            <a href="#process" class="block py-2 px-4 text-blue-500">How It Works</a>
+            <a href="#testimonials" class="block py-2 px-4 text-blue-500">Testimonials</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Your One-Stop Shop for All Things Basketball</h1>
+            <p class="text-xl md:text-2xl">Discover the best basketball gear, training, and community.</p>
+            <a href="#signup" class="cta-button mt-4">Join the Team</a>
+        </div>
+    </header>
+
+    <!-- Social Proof Section -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Trusted by Basketball Enthusiasts Nationwide</h2>
+        <div class="flex justify-center space-x-8">
+            <img src="company1.png" alt="Company 1" class="trusted-logo">
+            <img src="company2.png" alt="Company 2" class="trusted-logo">
+            <img src="company3.png" alt="Company 3" class="trusted-logo">
+            <img src="company4.png" alt="Company 4" class="trusted-logo">
+        </div>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section id="products" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Top Products</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🏀</div>
+                <h3 class="text-xl font-bold">Premium Basketballs</h3>
+                <p>Experience the best grip, durability, and performance with our top-notch basketballs.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">👟</div>
+                <h3 class="text-xl font-bold">Basketball Shoes</h3>
+                <p>Stay ahead of the game with our high-performance basketball shoes designed for comfort and agility.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🎽</div>
+                <h3 class="text-xl font-bold">Training Gear</h3>
+                <p>Enhance your skills with our range of training equipment and apparel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="process-step">
+                <div class="process-icon">🛒</div>
+                <h3 class="text-xl font-bold">1. Browse & Shop</h3>
+                <p>Explore our extensive collection of basketball products and make your purchase online.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">🚚</div>
+                <h3 class="text-xl font-bold">2. Fast Delivery</h3>
+                <p>Enjoy quick and reliable delivery straight to your doorstep.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">🏆</div>
+                <h3 class="text-xl font-bold">3. Elevate Your Game</h3>
+                <p>Utilize our products and services to enhance your basketball skills and performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer1.jpg" alt="Customer 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"Basketball Emporium has the best selection of gear and the customer service is top-notch!"</p>
+                <p class="font-bold">John Doe, Amateur Player</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer2.jpg" alt="Customer 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"I love the quality of the products and the fast delivery. Highly recommend!"</p>
+                <p class="font-bold">Jane Smith, Coach</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Join Basketball Emporium Today</h2>
+        <p class="text-gray-600 mb-8">Sign up now to receive exclusive offers and updates on the latest basketball gear.</p>
+        <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+            <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded">
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Sign Up Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Basketball Emporium. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+            <p class="mt-4">Made with <a href="https://landing-page-generator-tau.vercel.app" class="text-blue-500">LPG</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
