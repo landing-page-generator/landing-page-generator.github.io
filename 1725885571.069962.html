@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garage Extras: Level Up Your Garage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://cdn.glitch.global/6966ec4e-7e8a-4b66-a5f9-1a0f3cd5269c/hero?v=1723398806028') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Garage Extras" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#services" class="block py-2 px-4 text-blue-500">Services</a>
+            <a href="#process" class="block py-2 px-4 text-blue-500">Process</a>
+            <a href="#clients" class="block py-2 px-4 text-blue-500">Clients</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Transform Your Garage into the Ultimate Space</h1>
+            <p class="text-xl md:text-2xl">Garage Extras: Your one-stop shop for garage organization, storage, and upgrade solutions.</p>
+            <a href="#signup" class="cta-button mt-4">Explore Our Products</a>
+        </div>
+    </header>
+
+    <!-- Industry Leaders Section -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Trusted by Homeowners and Professionals</h2>
+        <div class="flex justify-center space-x-8">
+            <img src="logo1.png" alt="Company 1" class="trusted-logo">
+            <img src="logo2.png" alt="Company 2" class="trusted-logo">
+            <img src="logo3.png" alt="Company 3" class="trusted-logo">
+            <img src="logo4.png" alt="Company 4" class="trusted-logo">
+        </div>
+    </section>
+
+    <!-- Garage Extras Story -->
+    <section id="introduction" class="container mx-auto my-12 p-6 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-4">The Garage Extras Story</h2>
+            <p class="text-lg leading-relaxed">
+                Garage Extras was founded with a simple mission: to help homeowners reclaim their garages and turn them into functional, organized, and inviting spaces. We believe that your garage should be more than just a place to store stuff. It should be a reflection of your lifestyle and a source of pride.
+            </p>
+        </div>
+        <div class="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+            <img src="garage-extras-story.jpg" alt="Garage Extras Story" class="rounded-lg shadow-lg">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Garage Enhancement Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🧰</div>
+                <h3 class="text-xl font-bold">Garage Organization</h3>
+                <p>We offer a range of solutions to maximize your garage space, from custom shelving and cabinets to innovative storage systems.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🚗</div>
+                <h3 class="text-xl font-bold">Garage Flooring</h3>
+                <p>Upgrade your garage floor with durable and stylish epoxy coatings, mats, or tiles for a clean and functional surface.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">💡</div>
+                <h3 class="text-xl font-bold">Garage Lighting</h3>
+                <p>Enhance the visibility and safety of your garage with energy-efficient lighting solutions, including LED fixtures and motion sensors.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🛠️</div>
+                <h3 class="text-xl font-bold">Garage Accessories</h3>
+                <p>Find the perfect accessories to complete your garage setup, from tool organizers and workbenches to overhead storage systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proven Process Section -->
+    <section id="process" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Simple and Efficient Process</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="process-step">
+                <div class="process-icon">💬</div>
+                <h3 class="text-xl font-bold">1. Free Consultation</h3>
+                <p>Let's chat about your garage needs and discuss how we can help you achieve your dream space.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">📐</div>
+                <h3 class="text-xl font-bold">2. Design and Planning</h3>
+                <p>We'll create a personalized design and plan based on your preferences and space requirements.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">🧰</div>
+                <h3 class="text-xl font-bold">3. Installation and Completion</h3>
+                <p>Our skilled technicians will install your garage enhancements efficiently and with meticulous attention to detail.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Help Entities Section -->
+    <section id="clients" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Serving a Diverse Range of Clients</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4">🏡</div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Homeowners</h3>
+                    <p>Whether you're a seasoned homeowner or a first-time buyer, we have the perfect solutions to enhance your garage and make it a more functional and enjoyable space.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4">🛠️</div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contractors</h3>
+                    <p>We partner with contractors to provide high-quality garage enhancement products and services for their clients, ensuring professional results and satisfied customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer1.jpg" alt="Customer 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"Garage Extras completely transformed my garage into a functional and organized space. I'm so glad I chose them!"</p>
+                <p class="font-bold">Sarah M., Happy Homeowner</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer2.jpg" alt="Customer 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"Working with Garage Extras was a breeze. Their team was professional, efficient, and delivered exactly what I envisioned for my garage."</p>
+                <p class="font-bold">David B., Satisfied Contractor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Ready to Level Up Your Garage?</h2>
+        <p class="text-gray-600 mb-8">Get in touch for a free consultation and let's create the garage you deserve.</p>
+        <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+            <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded">
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Get Started</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Garage Extras. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#signup" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Get Started</a>
+    </div>
+
+    <div class="fixed bottom-4 right-4">
+        <p class="text-xs text-gray-600">Made with LPG</p>
+        <a href="https://landing-page-generator-tau.vercel.app" class="text-xs text-gray-600">landing-page-generator-tau.vercel.app</a>
+    </div>
+</body>
+
+</html>
