@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkin Park - The Music That Defines a Generation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://cdn.glitch.global/6966ec4e-7e8a-4b66-a5f9-1a0f3cd5269c/hero?v=1723398806028') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Linkin Park" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#music">Music</a></li>
+                <li><a href="#legacy">Legacy</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#store">Store</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#music" class="block py-2 px-4 text-blue-500">Music</a>
+            <a href="#legacy" class="block py-2 px-4 text-blue-500">Legacy</a>
+            <a href="#news" class="block py-2 px-4 text-blue-500">News</a>
+            <a href="#store" class="block py-2 px-4 text-blue-500">Store</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Linkin Park: The Music That Defines a Generation</h1>
+            <p class="text-xl md:text-2xl">Experience the raw energy, emotional depth, and enduring legacy of Linkin Park.</p>
+            <a href="#music" class="cta-button mt-4">Explore Their Music</a>
+        </div>
+    </header>
+
+    <!-- Music Section -->
+    <section id="music" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Their Music: A Fusion of Genres</h2>
+        <p class="text-lg leading-relaxed text-center">Linkin Park's sound seamlessly blended rock, rap, and electronic influences, creating a unique sonic experience that resonated with millions worldwide.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="hybrid-theory-album-cover.jpg" alt="Hybrid Theory Album Cover" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Hybrid Theory</h3>
+                <p>Their breakout album, featuring iconic hits like "In the End" and "Crawling." </p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="meteora-album-cover.jpg" alt="Meteora Album Cover" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Meteora</h3>
+                <p>A continuation of their signature sound, with anthems like "Numb" and "Breaking the Habit."</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="minutes-to-midnight-album-cover.jpg" alt="Minutes to Midnight Album Cover" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Minutes to Midnight</h3>
+                <p>Their most experimental album, showcasing a broader sonic palette and introspective lyrics.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legacy Section -->
+    <section id="legacy" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">A Legacy of Impact</h2>
+        <p class="text-lg leading-relaxed text-center">Linkin Park's music touched countless lives, transcending genres and borders. Their lyrics resonated with the struggles and triumphs of a generation.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold">Global Phenomenon</h3>
+                <p>Linkin Park's music reached a global audience, selling over 70 million albums worldwide and earning numerous awards.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-xl font-bold">Cultural Impact</h3>
+                <p>Their unique sound and themes influenced countless artists, while their live performances became legendary for their high-energy and immersive experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Stay Connected with the Latest News</h2>
+        <p class="text-lg leading-relaxed text-center">Stay up-to-date with the latest news, releases, and projects related to Linkin Park. </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="news-item-1.jpg" alt="News Item 1" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Linkin Park's Music to Feature in New Film Soundtrack</h3>
+                <p>Read more about the exciting upcoming collaboration...</p>
+                <a href="#" class="cta-button mt-4">Read More</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="news-item-2.jpg" alt="News Item 2" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold">New Linkin Park Documentary Set to Premiere</h3>
+                <p>Get a behind-the-scenes look at their journey...</p>
+                <a href="#" class="cta-button mt-4">Read More</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="news-item-3.jpg" alt="News Item 3" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Linkin Park's Iconic Album to be Re-released</h3>
+                <p>Get ready for a special anniversary edition...</p>
+                <a href="#" class="cta-button mt-4">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Shop for Linkin Park Merchandise</h2>
+        <p class="text-lg leading-relaxed text-center">Find exclusive merchandise, albums, apparel, and more at the official Linkin Park store.</p>
+        <div class="flex justify-center mt-8">
+            <a href="#" class="cta-button mt-4">Visit the Store</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Linkin Park. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#music" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Explore Their Music</a>
+    </div>
+    <div class="made-with-lpg">
+        Made with <a href="https://landing-page-generator-tau.vercel.app/">LPG</a>
+    </div>
+</body>
+
+</html>
