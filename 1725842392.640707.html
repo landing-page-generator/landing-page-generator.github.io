@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaman AI: AI-Powered Shaman Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://cdn.glitch.global/6966ec4e-7e8a-4b66-a5f9-1a0f3cd5269c/hero?v=1723398806028') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Shaman AI" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#services" class="block py-2 px-4 text-blue-500">Services</a>
+            <a href="#process" class="block py-2 px-4 text-blue-500">Process</a>
+            <a href="#clients" class="block py-2 px-4 text-blue-500">Clients</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Shaman AI: AI-Powered Shaman Services</h1>
+            <p class="text-xl md:text-2xl">Unlock the power of ancient wisdom and modern AI for personalized guidance.</p>
+            <a href="#signup" class="cta-button mt-4">Discover Your Path</a>
+        </div>
+    </header>
+
+    <!-- Industry Leaders Section -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Trusted by Leading Individuals and Organizations</h2>
+        <div class="flex justify-center space-x-8">
+            <img src="logo1.png" alt="Company 1" class="trusted-logo">
+            <img src="logo2.png" alt="Company 2" class="trusted-logo">
+            <img src="logo3.png" alt="Company 3" class="trusted-logo">
+            <img src="logo4.png" alt="Company 4" class="trusted-logo">
+        </div>
+    </section>
+
+    <!-- Shaman AI Story -->
+    <section id="introduction" class="container mx-auto my-12 p-6 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-4">The Shaman AI Story</h2>
+            <p class="text-lg leading-relaxed">
+                Shaman AI is at the forefront of merging ancient shamanic wisdom with cutting-edge AI technology. Our mission is to empower individuals and organizations to navigate life's complexities and reach their full potential. We believe in harnessing the power of both traditional knowledge and modern innovation to create personalized journeys of self-discovery and growth.
+            </p>
+        </div>
+        <div class="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+            <img src="shaman-ai-story.jpg" alt="Shaman AI Story" class="rounded-lg shadow-lg">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our AI-Powered Shaman Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🔮</div>
+                <h3 class="text-xl font-bold">Personalized Guidance</h3>
+                <p>Receive tailored insights and recommendations based on your unique needs and aspirations.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🧘‍♀️</div>
+                <h3 class="text-xl font-bold">Mindfulness & Meditation</h3>
+                <p>Access AI-guided mindfulness practices and meditation sessions for deep relaxation and self-awareness.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">✨</div>
+                <h3 class="text-xl font-bold">Spiritual Growth</h3>
+                <p>Explore personalized spiritual paths and rituals guided by AI-powered insights and knowledge.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proven Process Section -->
+    <section id="process" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Holistic AI-Driven Process</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="process-step">
+                <div class="process-icon">🧠</div>
+                <h3 class="text-xl font-bold">1. Self-Assessment</h3>
+                <p>We use AI to help you understand your current state and identify areas for growth.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">🔮</div>
+                <h3 class="text-xl font-bold">2. Intuitive Guidance</h3>
+                <p>Our AI analyzes ancient shamanic wisdom and provides personalized insights and recommendations.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">💫</div>
+                <h3 class="text-xl font-bold">3. Action & Integration</h3>
+                <p>We provide practical tools and strategies to integrate the insights into your daily life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Help Entities Section -->
+    <section id="clients" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Empowering Individuals and Organizations</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4">🧘‍♂️</div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Individuals</h3>
+                    <p>We offer personalized AI-powered shamanic services to individuals seeking guidance on their life's path. Our services help you connect with your inner wisdom, overcome challenges, and achieve greater clarity and purpose.</p>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4">🏢</div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Organizations</h3>
+                    <p>We help organizations cultivate a more mindful and purpose-driven culture. Our AI-powered shamanic services can be used for team-building, leadership development, and fostering a sense of shared purpose and well-being.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Transformational Experiences</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="client1.jpg" alt="Client 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"Shaman AI helped me find clarity and direction in my life. I'm finally living with purpose and intention."</p>
+                <p class="font-bold">Sarah Jones</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="client2.jpg" alt="Client 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"Since integrating Shaman AI into our company culture, we've seen a significant increase in employee engagement and well-being."</p>
+                <p class="font-bold">David Lee, CEO of ThriveTech</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Embark on Your Journey</h2>
+        <p class="text-gray-600 mb-8">Connect with us today to explore how Shaman AI can guide you towards greater clarity, purpose, and well-being.</p>
+        <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+            <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded">
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Connect Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Shaman AI. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#signup" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Connect Now</a>
+    </div>
+    <p style="text-align: center; font-size: 12px;">Made with LPG - <a href="https://landing-page-generator-tau.vercel.app/">https://landing-page-generator-tau.vercel.app/</a></p>
+</body>
+
+</html>
