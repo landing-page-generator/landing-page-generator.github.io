@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Websites in Minutes with AI | Sign Up Now</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://cdn.glitch.global/6966ec4e-7e8a-4b66-a5f9-1a0f3cd5269c/hero?v=1723398806028') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Website Builder" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#process">How it Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#features" class="block py-2 px-4 text-blue-500">Features</a>
+            <a href="#process" class="block py-2 px-4 text-blue-500">How it Works</a>
+            <a href="#pricing" class="block py-2 px-4 text-blue-500">Pricing</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Build Stunning Websites in Minutes with AI</h1>
+            <p class="text-xl md:text-2xl">Generate an entire website, including waitlist signup and payment, from a simple concept.</p>
+            <a href="#signup" class="cta-button mt-4">Join the Waitlist</a>
+        </div>
+    </header>
+
+    <!-- Feature Section -->
+    <section id="features" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Supercharge Your Website Creation</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">⚡️</div>
+                <h3 class="text-xl font-bold">Blazing Fast</h3>
+                <p>Go from idea to website in under 5 minutes. No coding required.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🎨</div>
+                <h3 class="text-xl font-bold">Beautiful Designs</h3>
+                <p>Choose from stunning templates or create a custom look with our AI-powered design tools.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">💰</div>
+                <h3 class="text-xl font-bold">Built-in Payments</h3>
+                <p>Accept payments seamlessly, with secure checkout integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="process" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Here's How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="process-step">
+                <div class="process-icon">✍️</div>
+                <h3 class="text-xl font-bold">1. Describe Your Idea</h3>
+                <p>Tell us about your website in a few sentences. We'll use AI to understand your vision.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">🤖</div>
+                <h3 class="text-xl font-bold">2. AI Creates Your Site</h3>
+                <p>Our AI engine will generate a unique, fully functional website based on your input.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">🚀</div>
+                <h3 class="text-xl font-bold">3. Launch Your Website</h3>
+                <p>Publish your website instantly with built-in features like waitlist signups and payments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Simple and Affordable Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold">Free Plan</h3>
+                <p class="text-gray-500">Perfect for trying out the platform.</p>
+                <ul>
+                    <li>Basic website creation</li>
+                    <li>Limited customization</li>
+                    <li>No payment integration</li>
+                </ul>
+                <button class="cta-button mt-4">Sign Up Free</button>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold">Pro Plan</h3>
+                <p class="text-gray-500">For serious creators.</p>
+                <ul>
+                    <li>Advanced website creation</li>
+                    <li>Full customization</li>
+                    <li>Integrated payments</li>
+                </ul>
+                <button class="cta-button mt-4">$19/month</button>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold">Enterprise Plan</h3>
+                <p class="text-gray-500">For businesses and agencies.</p>
+                <ul>
+                    <li>All Pro features</li>
+                    <li>Priority support</li>
+                    <li>Advanced analytics</li>
+                </ul>
+                <button class="cta-button mt-4">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Users Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="user1.jpg" alt="User 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"I was able to launch a website for my new business in under an hour! It's so easy and intuitive to use." </p>
+                <p class="font-bold">Sarah Miller, Entrepreneur</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="user2.jpg" alt="User 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"This AI-powered builder is a game-changer. I can finally build professional websites without hiring a developer." </p>
+                <p class="font-bold">John Davis, Marketing Manager</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Join the Waitlist Today</h2>
+        <p class="text-gray-600 mb-8">Be among the first to experience the future of website creation.</p>
+        <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+            <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded">
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Join Waitlist</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Website Builder. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#signup" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Join Waitlist</a>
+    </div>
+</body>
+
+</html>
+
+Made with LPG - <a href="https://landing-page-generator-tau.vercel.app">https://landing-page-generator-tau.vercel.app</a>
