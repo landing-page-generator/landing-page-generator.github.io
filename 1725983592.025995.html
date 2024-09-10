@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mango Mania - Your Source for the Sweetest Mangoes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FFC107;
+            --secondary-color: #4CAF50;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://images.unsplash.com/photo-1567620832903-93f6c72d952b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Mango Mania" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#our-mangoes">Our Mangoes</a></li>
+                <li><a href="#shop">Shop Now</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#about" class="block py-2 px-4 text-blue-500">About Us</a>
+            <a href="#our-mangoes" class="block py-2 px-4 text-blue-500">Our Mangoes</a>
+            <a href="#shop" class="block py-2 px-4 text-blue-500">Shop Now</a>
+            <a href="#contact" class="block py-2 px-4 text-blue-500">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Mango Mania: Taste the Sweetness</h1>
+            <p class="text-xl md:text-2xl">Experience the freshest, most delicious mangoes delivered straight to your door.</p>
+            <a href="#shop" class="cta-button mt-4">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">About Mango Mania</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="md:w-1/2">
+                <img src="about-us.jpg" alt="About Us" class="rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+                <p class="text-lg leading-relaxed">At Mango Mania, we are passionate about bringing you the finest quality mangoes, handpicked from the most fertile orchards. Our dedication to freshness ensures that every mango you receive is bursting with flavor and sweetness. We believe that everyone deserves to enjoy the delightful taste of a perfectly ripened mango, and we make it convenient and easy for you to get your fix.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Mangoes Section -->
+    <section id="our-mangoes" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Delicious Mango Varieties</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="mango1.jpg" alt="Mango Variety 1" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-bold">Mango Variety 1</h3>
+                <p>Known for its sweetness and vibrant color, Mango Variety 1 is a true delight.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="mango2.jpg" alt="Mango Variety 2" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-bold">Mango Variety 2</h3>
+                <p>With its unique flavor and aroma, Mango Variety 2 is a favorite among mango enthusiasts.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="mango3.jpg" alt="Mango Variety 3" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-bold">Mango Variety 3</h3>
+                <p>Mango Variety 3 is perfect for those who prefer a slightly tart and tangy mango.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Now Section -->
+    <section id="shop" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Shop Our Mangoes Now!</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="mango-box.jpg" alt="Mango Box" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-bold">Mango Box (10 Mangoes)</h3>
+                <p>Enjoy a variety of our freshest mangoes, delivered right to your door.</p>
+                <a href="#" class="cta-button mt-4">Add to Cart</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="mango-basket.jpg" alt="Mango Basket" class="w-full h-40 object-cover rounded-t-lg mb-4">
+                <h3 class="text-xl font-bold">Mango Basket (20 Mangoes)</h3>
+                <p>A perfect gift for any mango lover, this basket is full of delicious goodness.</p>
+                <a href="#" class="cta-button mt-4">Add to Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer1.jpg" alt="Customer 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"The mangoes from Mango Mania are simply the best I've ever tasted. So fresh and flavorful!"</p>
+                <p class="font-bold">John Smith</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer2.jpg" alt="Customer 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"I've been ordering from Mango Mania for years, and their quality never disappoints. Highly recommend!"</p>
+                <p class="font-bold">Jane Doe</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="md:w-1/2">
+                <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+                    <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-2 mb-4 border rounded">
+                    <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 mb-4 border rounded">
+                    <textarea name="message" placeholder="Your Message" class="w-full px-4 py-2 mb-4 border rounded resize-none"></textarea>
+                    <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Send Message</button>
+                </form>
+            </div>
+            <div class="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+                <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                <p>Phone: +1-555-123-4567</p>
+                <p>Email: info@mangomania.com</p>
+                <p>Address: 123 Main Street, Anytown, USA</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Mango Mania. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#shop" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Shop Now</a>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <p style="text-align: center; margin-top: 20px;">Made with LPG <a href="https://landing-page-generator-tau.vercel.app">https://landing-page-generator-tau.vercel.app</a></p>
+</body>
+
+</html>
