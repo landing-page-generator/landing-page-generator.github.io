@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Selling Company - Find Your Perfect Phone Today</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://cdn.glitch.global/6966ec4e-7e8a-4b66-a5f9-1a0f3cd5269c/hero?v=1723398806028') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Phone Selling Company" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#process">How It Works</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#features" class="block py-2 px-4 text-blue-500">Features</a>
+            <a href="#process" class="block py-2 px-4 text-blue-500">How It Works</a>
+            <a href="#reviews" class="block py-2 px-4 text-blue-500">Reviews</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Find Your Perfect Phone Today</h1>
+            <p class="text-xl md:text-2xl">Browse a wide selection of smartphones, compare prices, and get the best deals.</p>
+            <a href="#signup" class="cta-button mt-4">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Feature Section -->
+    <section id="features" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Why Choose Us?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🔍</div>
+                <h3 class="text-xl font-bold">Vast Selection</h3>
+                <p>Discover the latest and greatest smartphones from top brands.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">💰</div>
+                <h3 class="text-xl font-bold">Competitive Prices</h3>
+                <p>Get unbeatable deals and save money on your next phone.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">📦</div>
+                <h3 class="text-xl font-bold">Fast & Secure Delivery</h3>
+                <p>Enjoy fast shipping and secure transactions, delivered straight to your doorstep.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="process" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="process-step">
+                <div class="process-icon">🔎</div>
+                <h3 class="text-xl font-bold">1. Browse Our Catalog</h3>
+                <p>Explore our wide range of smartphones and filter by brand, price, and features.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">🛒</div>
+                <h3 class="text-xl font-bold">2. Select Your Phone</h3>
+                <p>Choose the phone that best suits your needs and add it to your cart.</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon">🔒</div>
+                <h3 class="text-xl font-bold">3. Secure Checkout</h3>
+                <p>Complete your purchase with our secure payment gateway and receive your phone quickly.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer1.jpg" alt="Customer 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"I was so impressed with the selection and prices. I found the perfect phone at a fraction of the cost!"</p>
+                <p class="font-bold">John Doe</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer2.jpg" alt="Customer 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"The delivery was super fast and the phone arrived in perfect condition. I'm very satisfied!"</p>
+                <p class="font-bold">Jane Smith</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Ready to Upgrade?</h2>
+        <p class="text-gray-600 mb-8">Sign up today and start browsing our amazing phone selection.</p>
+        <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+            <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded">
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Get Started</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Phone Selling Company. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#signup" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Get Started</a>
+    </div>
+
+    <script>
+        // Mobile Menu Functionality
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <p style="text-align: center; font-size: 12px; margin-top: 20px;">Made with LPG <a href="https://landing-page-generator-tau.vercel.app" target="_blank">https://landing-page-generator-tau.vercel.app</a></p>
+</body>
+
+</html>
