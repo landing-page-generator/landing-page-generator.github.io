@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stunning Jewelry - Discover Your Perfect Piece</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://cdn.glitch.global/6966ec4e-7e8a-4b66-a5f9-1a0f3cd5269c/hero?v=1723398806028') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Stunning Jewelry" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#shop">Shop Now</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#about" class="block py-2 px-4 text-blue-500">About Us</a>
+            <a href="#collections" class="block py-2 px-4 text-blue-500">Collections</a>
+            <a href="#shop" class="block py-2 px-4 text-blue-500">Shop Now</a>
+            <a href="#contact" class="block py-2 px-4 text-blue-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Stunning Jewelry</h1>
+            <p class="text-xl md:text-2xl">Discover your perfect piece, crafted with love and artistry.</p>
+            <a href="#shop" class="cta-button mt-4">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">About Us</h2>
+        <p class="text-lg leading-relaxed text-center">
+            We are passionate about creating exquisite jewelry that celebrates your unique style. Our team of skilled artisans handcrafts each piece with meticulous attention to detail, using only the finest materials. We believe that jewelry is more than just an accessory; it's an expression of your personality and a timeless treasure to be cherished for years to come.
+        </p>
+        <div class="flex justify-center mt-8">
+            <img src="jewelry-makers.jpg" alt="Jewelry Makers" class="rounded-lg shadow-lg w-1/2">
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section id="collections" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Collections</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="necklace-collection.jpg" alt="Necklace Collection" class="w-full mb-4 rounded-lg">
+                <h3 class="text-xl font-bold">Necklaces</h3>
+                <p>Explore our stunning selection of necklaces, from delicate pendants to bold statement pieces.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="earring-collection.jpg" alt="Earring Collection" class="w-full mb-4 rounded-lg">
+                <h3 class="text-xl font-bold">Earrings</h3>
+                <p>Find the perfect earrings to complement your style, from classic studs to dazzling drop earrings.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="bracelet-collection.jpg" alt="Bracelet Collection" class="w-full mb-4 rounded-lg">
+                <h3 class="text-xl font-bold">Bracelets</h3>
+                <p>Adorn your wrist with our beautiful bracelets, available in a variety of materials and styles.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Now Section -->
+    <section id="shop" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Shop Our Latest Arrivals</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="jewelry-product-1.jpg" alt="Product 1" class="w-full mb-4 rounded-lg">
+                <h3 class="text-xl font-bold">Delicate Diamond Necklace</h3>
+                <p class="text-gray-600">A timeless piece that sparkles with elegance.</p>
+                <a href="#" class="cta-button mt-4">Shop Now</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="jewelry-product-2.jpg" alt="Product 2" class="w-full mb-4 rounded-lg">
+                <h3 class="text-xl font-bold">Statement Emerald Earrings</h3>
+                <p class="text-gray-600">Add a touch of vibrant color to your ensemble.</p>
+                <a href="#" class="cta-button mt-4">Shop Now</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="jewelry-product-3.jpg" alt="Product 3" class="w-full mb-4 rounded-lg">
+                <h3 class="text-xl font-bold">Gold Chain Bracelet</h3>
+                <p class="text-gray-600">A classic and versatile piece for everyday wear.</p>
+                <a href="#" class="cta-button mt-4">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer-1.jpg" alt="Customer 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"I received so many compliments on my new necklace! It's absolutely stunning and beautifully crafted."</p>
+                <p class="font-bold">Sarah Jones</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="customer-2.jpg" alt="Customer 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"The earrings I bought were the perfect finishing touch for my special occasion outfit. They're simply gorgeous!"</p>
+                <p class="font-bold">David Lee</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="container mx-auto my-12 p-6 bg-blue-100">
+        <h2 class="text-3xl font-bold text-center mb-4">Contact Us</h2>
+        <p class="text-gray-600 mb-8 text-center">Have any questions or need assistance? We're here to help! Feel free to reach out to us.</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                <ul>
+                    <li>Email: info@stunningjewelry.com</li>
+                    <li>Phone: +1 555-123-4567</li>
+                    <li>Address: 123 Main Street, Anytown, USA</li>
+                </ul>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-bold mb-4">Send Us a Message</h3>
+                <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+                    <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-2 mb-4 border rounded">
+                    <input type="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 mb-4 border rounded">
+                    <textarea name="message" placeholder="Your Message" class="w-full px-4 py-2 mb-4 border rounded resize-none"></textarea>
+                    <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Stunning Jewelry. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#shop" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Shop Now</a>
+    </div>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenuItems = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenuItems.classList.toggle('hidden');
+        });
+    </script>
+    <p style="text-align: center; font-size: 12px; margin-top: 20px;">Made with LPG <a href="https://landing-page-generator-tau.vercel.app">https://landing-page-generator-tau.vercel.app</a></p>
+</body>
+
+</html>
