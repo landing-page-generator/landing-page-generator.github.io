@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Æthos AI Hub - Powering the AI Ecosystem</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://cdn.glitch.global/6966ec4e-7e8a-4b66-a5f9-1a0f3cd5269c/hero?v=1723398806028') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Æthos AI Hub" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#about">About</a></li>
+                <li><a href="#ecosystem">The Ecosystem</a></li>
+                <li><a href="#join">Join Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#about" class="block py-2 px-4 text-blue-500">About</a>
+            <a href="#ecosystem" class="block py-2 px-4 text-blue-500">The Ecosystem</a>
+            <a href="#join" class="block py-2 px-4 text-blue-500">Join Us</a>
+            <a href="#contact" class="block py-2 px-4 text-blue-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">The Æthos AI Hub</h1>
+            <p class="text-xl md:text-2xl">Where innovation thrives and the future of AI is built.</p>
+            <a href="#join" class="cta-button mt-4">Join the Ecosystem</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">About Æthos AI Hub</h2>
+        <p class="text-lg text-center">
+            Æthos AI Hub is a vibrant ecosystem that brings together the leading minds and organizations shaping the future of Artificial Intelligence. We believe in the power of collaboration and strive to foster a dynamic environment for innovation, growth, and advancement.
+        </p>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section id="ecosystem" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">The Æthos AI Ecosystem</h2>
+        <div class="flex flex-col items-center justify-center">
+            <img src="wheel-icon.png" alt="Æthos AI Hub Wheel" class="w-1/2 mb-6">
+            <p class="text-lg text-center">
+                Æthos AI Hub is built on a collaborative foundation, bringing together diverse stakeholders to drive AI innovation. 
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🚀</div>
+                <h3 class="text-xl font-bold">Startups</h3>
+                <p>Innovative companies pushing the boundaries of AI.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🏢</div>
+                <h3 class="text-xl font-bold">Corporations</h3>
+                <p>Established companies embracing AI to transform their operations.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🤝</div>
+                <h3 class="text-xl font-bold">Nonprofits</h3>
+                <p>Organizations using AI for social good and positive impact.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">💰</div>
+                <h3 class="text-xl font-bold">Funds & Investors</h3>
+                <p>Supporting the growth of AI startups and initiatives.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🏛️</div>
+                <h3 class="text-xl font-bold">Governments</h3>
+                <p>Shaping AI policies and fostering ethical development.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🎓</div>
+                <h3 class="text-xl font-bold">Academia</h3>
+                <p>Research institutions pushing the frontiers of AI research.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🎨</div>
+                <h3 class="text-xl font-bold">Artists & Creators</h3>
+                <p>Exploring the creative potential of AI in art, music, and design.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">🛠️</div>
+                <h3 class="text-xl font-bold">Service Providers</h3>
+                <p>Offering expertise in AI development, consulting, and infrastructure.</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon">💻</div>
+                <h3 class="text-xl font-bold">Infrastructure Partners</h3>
+                <p>Providing the essential tools and platforms for AI development.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Join the Æthos AI Hub</h2>
+        <p class="text-lg text-center">
+            Whether you're a seasoned AI expert, a budding startup, or a curious individual, there's a place for you in the Æthos AI Hub. 
+            Connect with like-minded individuals, participate in exciting events, and collaborate on groundbreaking projects.
+        </p>
+        <div class="flex justify-center mt-6">
+            <a href="#signup" class="cta-button">Get Involved</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+        <p class="text-lg text-center">
+            We'd love to hear from you! Whether you have a question, want to share your ideas, or explore potential collaborations, please reach out.
+        </p>
+        <div class="flex justify-center mt-6">
+            <a href="mailto:info@aethos.ai" class="cta-button">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Æthos AI Hub. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#join" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Join the Ecosystem</a>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <div class="fixed bottom-4 right-4 z-50">
+        <p class="text-xs text-gray-600">Made with LPG</p>
+        <a href="https://landing-page-generator-tau.vercel.app" class="text-xs text-gray-600 hover:text-blue-500">landing-page-generator-tau.vercel.app</a>
+    </div>
+</body>
+
+</html>
