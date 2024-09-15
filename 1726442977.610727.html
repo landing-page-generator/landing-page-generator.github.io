@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Copilot: Validate Your Startup Idea In Minutes</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        /* Root Variables */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero-background {
+            background: url('<!-- Insert Hero Image URL -->') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <!-- Insert Logo Here -->
+                <a href="#"><img src="<!-- Insert Logo URL -->" alt="Logo" class="h-8"></a>
+            </div>
+            <ul class="menu">
+                <!-- Insert Menu Items Here -->
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="menu-toggle md:hidden">
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-button">
+                    <!-- Insert Menu Icon SVG -->
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div class="hero-content">
+            <h1>Validate Your Startup Idea In Minutes</h1>
+            <p>Fast-track your success with our AI-powered landing page generator. Build professional landing pages, test your idea, and attract early users – all without coding.</p>
+            <a href="#signup" class="cta-button">Create Your Landing Page</a>
+        </div>
+    </header>
+
+    <!-- Social Proof Section -->
+    <section id="social-proof" class="container mx-auto text-center">
+        <h2>Trusted by Innovators Worldwide</h2>
+        <div class="flex justify-center items-center">
+            <!-- Insert Company Logos -->
+        </div>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section id="features" class="container mx-auto">
+        <h2>Why Choose Our AI Generator?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Insert Feature Cards -->
+            <div class="feature-card text-center">
+                <img src="<!-- Insert Speed Icon URL -->" alt="Speed Icon" class="w-16 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Launch in Minutes</h3>
+                <p>Stop wasting time on tedious development. Our AI builds a professional landing page in seconds, so you can focus on what matters – your startup.</p>
+            </div>
+            <div class="feature-card text-center">
+                <img src="<!-- Insert Cost Icon URL -->" alt="Cost Icon" class="w-16 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Cost-Effective</h3>
+                <p>Save on costly development fees and launch your startup without breaking the bank. Our affordable pricing model makes validation accessible to all.</p>
+            </div>
+            <div class="feature-card text-center">
+                <img src="<!-- Insert User Friendly Icon URL -->" alt="User Friendly Icon" class="w-16 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">User-Friendly</h3>
+                <p>No coding skills? No problem. Our intuitive interface is designed for everyone, making it easy to customize your landing page and build a winning campaign.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explainer Video Section -->
+    <section id="video" class="container mx-auto text-center">
+        <h2>See How It Works</h2>
+        <!-- Insert Video Embed -->
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="container mx-auto">
+        <h2>Build Your Landing Page in 3 Easy Steps</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Insert Process Steps -->
+            <div class="step-card text-center">
+                <img src="<!-- Insert Step 1 Icon URL -->" alt="Step 1 Icon" class="w-16 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Choose Your Template</h3>
+                <p>Select from our library of pre-designed templates, or customize a blank page to suit your unique branding.</p>
+            </div>
+            <div class="step-card text-center">
+                <img src="<!-- Insert Step 2 Icon URL -->" alt="Step 2 Icon" class="w-16 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Personalize Your Content</h3>
+                <p>Easily edit text, images, and features to tell your startup's story. Use our AI-powered suggestions to craft the perfect landing page.</p>
+            </div>
+            <div class="step-card text-center">
+                <img src="<!-- Insert Step 3 Icon URL -->" alt="Step 3 Icon" class="w-16 mx-auto mb-4">
+                <h3 class="text-xl font-semibold">Launch and Track</h3>
+                <p>Publish your landing page in minutes. Our built-in analytics help you track your progress, measure your results, and optimize your campaign for success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto">
+        <h2>Success Stories</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Insert Testimonials -->
+            <div class="testimonial-card text-center p-6 rounded-lg shadow-lg">
+                <p class="text-gray-600 italic">"I was skeptical about using an AI-powered tool, but AI Copilot blew me away! I had a professional landing page up in minutes and it helped me attract early users so quickly. I highly recommend it to any startup founder."</p>
+                <p class="text-gray-800 font-semibold mt-4">Sarah Thompson, Founder of [Startup Name]</p>
+                <img src="<!-- Insert Sarah Thompson Image URL -->" alt="Sarah Thompson" class="w-16 mx-auto mt-4 rounded-full">
+            </div>
+            <div class="testimonial-card text-center p-6 rounded-lg shadow-lg">
+                <p class="text-gray-600 italic">"I was able to test my SaaS idea with real users using AI Copilot. It was so easy to create a landing page, even with my limited technical skills. The results were fantastic, and it helped me secure funding for my company."</p>
+                <p class="text-gray-800 font-semibold mt-4">John Smith, Founder of [Startup Name]</p>
+                <img src="<!-- Insert John Smith Image URL -->" alt="John Smith" class="w-16 mx-auto mt-4 rounded-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container mx-auto">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+            <!-- Insert FAQ Items -->
+            <div class="faq-item">
+                <h3 class="text-xl font-semibold cursor-pointer">Can I customize my landing page?</h3>
+                <div class="answer hidden">
+                    <p>Absolutely! You can choose from our pre-designed templates or start from scratch. Our intuitive drag-and-drop interface makes it easy to personalize your landing page with text, images, and more.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="text-xl font-semibold cursor-pointer">What kind of support is available?</h3>
+                <div class="answer hidden">
+                    <p>We offer comprehensive support to help you get the most out of our AI generator. You can access our knowledge base, contact our support team, or join our active community forum for assistance.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="text-xl font-semibold cursor-pointer">How much does it cost?</h3>
+                <div class="answer hidden">
+                    <p>We offer flexible pricing plans to suit your needs. You can start with our free trial to experience the power of AI Copilot, or choose a premium plan for advanced features and unlimited landing pages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="container mx-auto text-center">
+        <h2>Ready to Validate Your Idea?</h2>
+        <p>Join countless entrepreneurs who have accelerated their journey with AI Copilot.</p>
+        <form action="#" method="post" class="max-w-md mx-auto">
+            <!-- Insert Form Fields -->
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
+                <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-6">
+                <label for="startup-name" class="block text-gray-700 font-bold mb-2">Startup Name:</label>
+                <input type="text" id="startup-name" name="startup-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <button type="submit" class="cta-button">Create My Landing Page</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <!-- Insert Year --> <!-- Insert Company Name -->. All rights reserved.</p>
+        <div class="footer-links">
+            <!-- Insert Footer Links -->
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle Script
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.querySelector('nav ul');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+
+        // FAQ Accordion Script
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const header = item.querySelector('h3');
+            const answer = item.querySelector('.answer');
+
+            header.addEventListener('click', () => {
+                answer.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <p style="text-align: center; font-size: 12px; margin-top: 20px;">Made with <a href="https://landing-page-generator-tau.vercel.app" target="_blank">LPG</a></p>
+</body>
+
+</html>
