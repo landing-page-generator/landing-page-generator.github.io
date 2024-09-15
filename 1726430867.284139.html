@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barnacles: Spongebob's Stylish Apparel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://cdn.glitch.global/6966ec4e-7e8a-4b66-a5f9-1a0f3cd5269c/hero?v=1723398806028') no-repeat center center;
+            background-size: cover;
+            height: 110vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .service-icon,
+        .process-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .entity-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="Barnacles" class="h-8"></a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop Now</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <button id="menu-toggle" class="text-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#about" class="block py-2 px-4 text-blue-500">About</a>
+            <a href="#shop" class="block py-2 px-4 text-blue-500">Shop Now</a>
+            <a href="#blog" class="block py-2 px-4 text-blue-500">Blog</a>
+            <a href="#contact" class="block py-2 px-4 text-blue-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Barnacles: Spongebob's Stylish Apparel</h1>
+            <p class="text-xl md:text-2xl">Get ready to rock the coolest clothes in Bikini Bottom!</p>
+            <a href="#shop" class="cta-button mt-4">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">About Barnacles</h2>
+        <p class="text-lg leading-relaxed">
+            Barnacles is Spongebob's exciting new clothing line, bringing you the freshest styles from the depths of Bikini Bottom. Inspired by Spongebob's vibrant personality and love for all things fashionable, our collection features a range of apparel, accessories, and more for every style and occasion. From nautical chic to quirky cool, Barnacles has something for everyone.
+        </p>
+        <img src="spongebob-fashion.jpg" alt="Spongebob Fashion" class="rounded-lg shadow-lg mx-auto mt-8">
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Shop the Collection</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="t-shirt-1.jpg" alt="T-Shirt 1" class="w-full mb-4">
+                <h3 class="text-xl font-bold">Nautical T-Shirt</h3>
+                <p class="text-gray-600">Embrace the sea with this stylish nautical t-shirt.</p>
+                <a href="#" class="cta-button mt-4">Shop Now</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="hoodie-1.jpg" alt="Hoodie 1" class="w-full mb-4">
+                <h3 class="text-xl font-bold">Krabby Patty Hoodie</h3>
+                <p class="text-gray-600">Stay warm and show your love for the Krabby Patty.</p>
+                <a href="#" class="cta-button mt-4">Shop Now</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="hat-1.jpg" alt="Hat 1" class="w-full mb-4">
+                <h3 class="text-xl font-bold">Pineapple Hat</h3>
+                <p class="text-gray-600">Get a taste of pineapple with this stylish hat.</p>
+                <a href="#" class="cta-button mt-4">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">The Barnacles Blog</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="blog-post-1.jpg" alt="Blog Post 1" class="w-full mb-4">
+                <h3 class="text-xl font-bold">Spongebob's Fashion Secrets Revealed!</h3>
+                <p class="text-gray-600">Learn about Spongebob's style inspirations and fashion tips.</p>
+                <a href="#" class="text-blue-500 font-bold">Read More</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="blog-post-2.jpg" alt="Blog Post 2" class="w-full mb-4">
+                <h3 class="text-xl font-bold">How to Rock the Barnacles Look</h3>
+                <p class="text-gray-600">Get styling advice for your Barnacles apparel.</p>
+                <a href="#" class="text-blue-500 font-bold">Read More</a>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <img src="blog-post-3.jpg" alt="Blog Post 3" class="w-full mb-4">
+                <h3 class="text-xl font-bold">New Arrivals: Spring Collection</h3>
+                <p class="text-gray-600">Discover the latest and greatest from the Barnacles Spring collection.</p>
+                <a href="#" class="text-blue-500 font-bold">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto my-12 p-6 bg-gray-100">
+        <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+        <p class="text-gray-600 text-center mb-8">Have any questions? We're here to help!</p>
+        <form action="submit_form_url" method="post" class="max-w-md mx-auto px-4">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-bold mb-2">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-bold mb-2">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" class="w-full px-4 py-2 border rounded h-24 resize-none"></textarea>
+            </div>
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Barnacles. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">FAQ</a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sticky-cta">
+        <a href="#shop" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Shop Now</a>
+    </div>
+</body>
+
+</html>
+
+Made with LPG - <a href="https://landing-page-generator-tau.vercel.app">https://landing-page-generator-tau.vercel.app</a> 
