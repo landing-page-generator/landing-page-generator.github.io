@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Your SaaS Startup Idea in Minutes - Landing Page Generator</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        /* Root Variables */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        /* Base Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero-background {
+            background: url('https://images.unsplash.com/photo-1552266813-92353a9a17e9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-button {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="logo">
+                <!-- Insert Logo Here -->
+                <a href="#"><img src="https://www.freepnglogos.com/uploads/landing-page-png/landing-page-design-vector-free-download-7.png" alt="Logo" class="h-8"></a>
+            </div>
+            <ul class="menu">
+                <!-- Insert Menu Items Here -->
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="menu-toggle md:hidden">
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-button">
+                    <!-- Insert Menu Icon SVG -->
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div class="hero-content">
+            <h1>Validate Your SaaS Startup Idea in Minutes</h1>
+            <p>Fast-track your success with our AI-powered landing page generator. No coding needed, just instant results.</p>
+            <a href="#signup" class="cta-button">Create Your Landing Page Now</a>
+        </div>
+    </header>
+
+    <!-- Social Proof Section -->
+    <section id="social-proof" class="container mx-auto text-center">
+        <h2>Trusted by Leading SaaS Startups</h2>
+        <div class="flex justify-center items-center">
+            <!-- Insert Company Logos -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Slack_logo.svg/1200px-Slack_logo.svg.png" alt="Slack" class="w-24 h-12 mx-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Zoom_Video_Communications_logo.svg/1200px-Zoom_Video_Communications_logo.svg.png" alt="Zoom" class="w-24 h-12 mx-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Dropbox_logo.svg/1200px-Dropbox_logo.svg.png" alt="Dropbox" class="w-24 h-12 mx-4">
+        </div>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section id="features" class="container mx-auto">
+        <h2>Why Choose Our AI Landing Page Generator?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Insert Feature Cards -->
+            <div class="flex flex-col items-center p-6 rounded-lg shadow-md bg-white">
+                <img src="https://cdn-icons-png.flaticon.com/512/115/115597.png" alt="Speed Icon" class="w-16 h-16 mb-4">
+                <h3 class="text-xl font-bold mb-2">Launch in Minutes</h3>
+                <p>No more weeks of development. Create professional landing pages in minutes.</p>
+            </div>
+            <div class="flex flex-col items-center p-6 rounded-lg shadow-md bg-white">
+                <img src="https://cdn-icons-png.flaticon.com/512/3297/3297853.png" alt="Cost Icon" class="w-16 h-16 mb-4">
+                <h3 class="text-xl font-bold mb-2">Cost-Effective</h3>
+                <p>Save on expensive development costs and get your idea in front of users quickly.</p>
+            </div>
+            <div class="flex flex-col items-center p-6 rounded-lg shadow-md bg-white">
+                <img src="https://cdn-icons-png.flaticon.com/512/241/241970.png" alt="User-Friendly Icon" class="w-16 h-16 mb-4">
+                <h3 class="text-xl font-bold mb-2">User-Friendly</h3>
+                <p>No coding experience required. Our intuitive drag-and-drop interface makes it easy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explainer Video Section -->
+    <section id="video" class="container mx-auto text-center">
+        <h2>See How Easy it Is</h2>
+        <!-- Insert Video Embed -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto">
+        <h2>What Our Users Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Insert Testimonials -->
+            <div class="p-6 rounded-lg shadow-md bg-white">
+                <p class="text-gray-600">“This tool has been a game-changer for my startup. I was able to validate my idea and attract early users within a week!”</p>
+                <p class="font-bold mt-2">Sarah Thompson, Founder, [Startup Name]</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-md bg-white">
+                <p class="text-gray-600">“I love how easy it is to use. I built a beautiful landing page without writing a single line of code. Highly recommend it.”</p>
+                <p class="font-bold mt-2">John Smith, CEO, [Startup Name]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="container mx-auto">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-accordion">
+            <!-- Insert FAQ Items -->
+            <div class="border rounded-lg shadow-md">
+                <button class="px-5 py-3 text-left w-full font-bold text-gray-500 rounded-t-lg focus:outline-none">
+                    Can I customize my landing page?
+                </button>
+                <div class="px-5 py-3 text-gray-700 text-sm">
+                    Yes, you have full control over customizing your landing page design, content, and features.
+                </div>
+            </div>
+            <div class="border rounded-lg shadow-md">
+                <button class="px-5 py-3 text-left w-full font-bold text-gray-500 rounded-t-lg focus:outline-none">
+                    What kind of support do you offer?
+                </button>
+                <div class="px-5 py-3 text-gray-700 text-sm">
+                    We provide comprehensive support through email, chat, and detailed documentation.
+                </div>
+            </div>
+            <div class="border rounded-lg shadow-md">
+                <button class="px-5 py-3 text-left w-full font-bold text-gray-500 rounded-t-lg focus:outline-none">
+                    How much does it cost?
+                </button>
+                <div class="px-5 py-3 text-gray-700 text-sm">
+                    We offer flexible pricing plans to suit your budget. You can choose from a free trial or a paid subscription.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="container mx-auto text-center">
+        <h2>Ready to Validate Your Idea?</h2>
+        <p>Join countless entrepreneurs who have accelerated their journey.</p>
+        <form action="#" method="post" class="max-w-md mx-auto">
+            <!-- Insert Form Fields -->
+            <input type="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="text" name="startup_name" placeholder="Your Startup Name" class="w-full px-4 py-2 mb-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <button type="submit" class="cta-button">Create My Landing Page</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Landing Page Generator. All rights reserved.</p>
+        <div class="footer-links">
+            <!-- Insert Footer Links -->
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p>Made with LPG</p>
+        <a href="https://landing-page-generator-tau.vercel.app" class="text-blue-500">Landing Page Generator</a>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle Script
+        const menuButton = document.getElementById('menu-button');
+        const menu = document.querySelector('nav ul');
+
+        menuButton.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
