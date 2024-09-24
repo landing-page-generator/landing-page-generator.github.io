@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Amazing Toys with CrunchLabs! | STEM Kits for Kids</title>
+    <meta name="description" content="Unleash your child's inner engineer with CrunchLabs Build Boxes, a monthly subscription delivering exciting STEM-based toys and exclusive videos from Mark Rober.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Build Amazing Toys with CrunchLabs! | STEM Kits for Kids">
+    <meta property="og:description" content="Unleash your child's inner engineer with CrunchLabs Build Boxes, a monthly subscription delivering exciting STEM-based toys and exclusive videos from Mark Rober.">
+    <meta property="og:image" content="https://www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884">
+    <meta property="og:url" content="https://www.crunchlabs.com/products/build-box-subscription">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="//www.crunchlabs.com/cdn/shop/files/CrunchLabs_icon_translucent.png?crop=center&height=32&v=1649084500&width=32" type="image/x-icon">
+    <link rel="icon" href="//www.crunchlabs.com/cdn/shop/files/CrunchLabs_icon_translucent.png?crop=center&height=32&v=1649084500&width=32" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://yourwebsite.com/path-to-hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Icon Styling using Data Attributes */
+        .service-icon::before,
+        .process-icon::before,
+        .entity-icon::before {
+            content: attr(data-icon);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        /* Specific adjustments for entity icons */
+        .entity-icon::before {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Hide desktop menu on small screens */
+            .desktop-menu {
+                display: none;
+            }
+
+            /* Show mobile menu icon on small screens */
+            .mobile-menu {
+                display: block;
+            }
+
+            .trusted-logo {
+                max-width: 100px;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "CrunchLabs",
+      "url": "https://www.crunchlabs.com/",
+      "logo": "https://www.crunchlabs.com/cdn/shopifycloud/shopify/assets/no-image-2048-5e88c1b20e087fb7bbe9a3771824e743c244f437e4f8ba93bbf7b11b53f7824c_200x.gif",
+      "sameAs": [
+        "https://www.facebook.com/crunchlabsofficial",
+        "https://twitter.com/crunchlabs",
+        "https://www.youtube.com/crunchlabs?app=desktop&sub_confirmation=1",
+        "http://instagram.com/crunchlabs",
+        "http://tiktok.com/@crunchlabs"
+      ],
+      "description": "Unleash your child's inner engineer with CrunchLabs Build Boxes, a monthly subscription delivering exciting STEM-based toys and exclusive videos from Mark Rober."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <!-- Replace with your logo or brand name -->
+                <a href="/">
+                    <img src="//www.crunchlabs.com/cdn/shop/files/dark-logo.svg?v=1676481560" alt="CrunchLabs Logo" width="125" height="30" style="max-width: 125px">
+                </a>
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="/pages/subscription-comparison">Subscription Boxes</a></li>
+                <li><a href="/pages/about-us">Our Company</a></li>
+                <li><a href="/collections/shop-crunchlabs">Shop</a></li>
+                <li><a href="/pages/education">Schools & Groups</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-blue-500" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="/pages/subscription-comparison" class="block py-2 px-4 text-blue-500">Subscription Boxes</a>
+            <a href="/pages/about-us" class="block py-2 px-4 text-blue-500">Our Company</a>
+            <a href="/collections/shop-crunchlabs" class="block py-2 px-4 text-blue-500">Shop</a>
+            <a href="/pages/education" class="block py-2 px-4 text-blue-500">Schools & Groups</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Build Amazing Toys with CrunchLabs!</h1>
+            <p class="text-xl md:text-2xl">STEM Kits for Kids with Exclusive Mark Rober Videos</p>
+            <a href="#plans" class="cta-button mt-4">Choose Your Plan</a>
+        </div>
+    </header>
+
+    <!-- Social Proof Section -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Loved by Kids and Parents</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center space-x-0 md:space-x-8 space-y-4 md:space-y-0">
+            <!-- Replace with your client logos -->
+            <img src="https://d3hw6dc1ow8pp2.cloudfront.net/images/957d22b6-f44a-49ed-80cb-cc2e77c7cfe4/913810b8-6051-4391-97a6-ca61bcce86c7_thumbnail_120_120.jpg" alt="Customer Testimonial" class="trusted-logo">
+            <img src="https://d3hw6dc1ow8pp2.cloudfront.net/images/957d22b6-f44a-49ed-80cb-cc2e77c7cfe4/b6df1efa-8757-40a8-86e4-9cc8aa01c826_thumbnail_120_120.jpg" alt="Customer Testimonial" class="trusted-logo">
+            <img src="https://d3hw6dc1ow8pp2.cloudfront.net/images/957d22b6-f44a-49ed-80cb-cc2e77c7cfe4/e7b9dd7b-d39d-42c5-ba30-7d9952021238_thumbnail_120_120.jpg" alt="Customer Testimonial" class="trusted-logo">
+            <img src="https://d3hw6dc1ow8pp2.cloudfront.net/images/957d22b6-f44a-49ed-80cb-cc2e77c7cfe4/a187df69-db18-45c6-a347-bf8a98b76f79_thumbnail_120_120.jpg" alt="Customer Testimonial" class="trusted-logo">
+        </div>
+        <div class="mt-8 flex justify-center">
+            <!-- Replace with security badge -->
+            <div class="okeReviews oke-sr"><div class=""><div class="oke-sr-rating"> 4.8 </div><div class="oke-sr-stars"><div class="oke-stars"><!----><div class="oke-stars-background"><svg height="15" viewBox="0 0 80.46666666666667 14" aria-hidden="true" role="none"><use x="0" href="#oke-star-empty"></use><use x="16.466666666666665" href="#oke-star-empty"></use><use x="32.93333333333333" href="#oke-star-empty"></use><use x="49.39999999999999" href="#oke-star-empty"></use><use x="65.86666666666666" href="#oke-star-empty"></use></svg></div><div class="oke-stars-foreground" style="width: 96.3712%;"><svg height="15" viewBox="0 0 80.46666666666667 14" aria-hidden="true" role="none"><use x="0" href="#oke-star-filled"></use><use x="16.466666666666665" href="#oke-star-filled"></use><use x="32.93333333333333" href="#oke-star-filled"></use><use x="49.39999999999999" href="#oke-star-filled"></use><use x="65.86666666666666" href="#oke-star-filled"></use></svg></div><span class="oke-a11yText">Rated 4.8 out of 5 stars</span></div></div><div class="oke-sr-count"><span class="oke-sr-count-number">807</span><span class="oke-sr-label-text"> Reviews</span><!----></div><!----></div>
+        </div>
+    </section>
+
+    <!-- About Section with Video -->
+    <section id="introduction" class="container mx-auto my-12 p-6 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-4">About CrunchLabs</h2>
+            <p class="text-lg leading-relaxed">
+                CrunchLabs is a collaboration between Mark Rober and his team, dedicated to inspiring a love for STEM in kids.  We're passionate about making learning fun and hands-on with our monthly Build Boxes.
+            </p>
+        </div>
+        <div class="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+            <!-- Replace with your video -->
+            <div class="custom-video-container">
+                <custom-video class="placement--grid" data-video-type="local" data-video-id="//www.crunchlabs.com/cdn/shop/videos/c/vp/1092769d6f5041ad868c04498dad40b8/1092769d6f5041ad868c04498dad40b8.HD-1080p-7.2Mbps-34747693.mp4?v=0" data-placement="grid" data-muted="true" data-autoplay="true" data-controls="true">
+                    <div class="cta-btn" data-aos="hero">
+                        <button class="play__button btn p-0 m-0" data-trigger-video aria-label="Play Video">
+                            <span class="play__button__icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6 8 3.2 16V0l10.4 8z" fill="#fff"/>
+                                </svg>
+                            </span>
+                        </button>
+                        <button class="pause__button btn p-0 m-0" data-pause-video aria-label="Paused Video">
+                            <i class="icon-pause"></i>
+                        </button>
+                    </div>
+                    <div class="content-section">
+                        <div class="poster-image "><img srcset="//www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884&width=350 350w,//www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884&width=550 550w,//www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884&width=750 750w,//www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884&width=991 991w,//www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884&width=1200 1200w,//www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884&width=1500 1500w,//www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884 1920w"
+                            src="//www.crunchlabs.com/cdn/shop/files/preview_images/1092769d6f5041ad868c04498dad40b8.thumbnail.0000000000.jpg?v=1726253884&width=1500" 
+                            loading="lazy"
+                            sizes="(min-width: 1320px) 1320px, 100vw"
+                            alt="Video of Mark Rober Introducing Build Box"
+                            width="1920"
+                            height="1080.0""
+                        ></div>
+                    </div><div class="video-section " tabindex="0"></div>
+                </custom-video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Plans Section -->
+    <section id="plans" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Choose Your Build Box Adventure</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Build Box Subscription Plan 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🏆"></div>
+                <h3 class="text-xl font-bold">Build Box Subscription - Annual (Pay Annually)</h3>
+                <p class="mb-4">Get 12 months of STEM fun for the price of 10! </p>
+                <p class="text-xl font-bold mb-2" style="color: #e63e30;">$24.95/box</p>
+                <p class="font-size-sm">Save $60 USD compared to monthly payments.</p>
+                <a href="/products/build-box-subscription?product-handle=build-box-subscription-annually" class="cta-button mt-4">Subscribe Now</a>
+            </div>
+            <!-- Build Box Subscription Plan 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="📈"></div>
+                <h3 class="text-xl font-bold">Build Box Subscription - Annual (Pay Monthly)</h3>
+                <p class="mb-4">Get 12 months of STEM fun with a flexible payment plan.</p>
+                <p class="text-xl font-bold mb-2" style="color: #e63e30;">$27.45/box</p>
+                <p class="font-size-sm">Get 1 month FREE! </p>
+                <a href="/products/build-box-subscription?product-handle=build-box-subscription-12-months" class="cta-button mt-4">Subscribe Now</a>
+            </div>
+            <!-- Build Box Subscription Plan 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="📝"></div>
+                <h3 class="text-xl font-bold">Build Box Subscription - Quarterly (Pay Every 3 Months)</h3>
+                <p class="mb-4">The perfect option for trying before you commit!</p>
+                <p class="text-xl font-bold mb-2" style="color: #e63e30;">$29.95/box</p>
+                <p class="font-size-sm">Cancel anytime before your next payment.</p>
+                <a href="/products/build-box-subscription?product-handle=build-box-subscription-paid-quarterly" class="cta-button mt-4">Subscribe Now</a>
+            </div>
+            <!-- Build Box Subscription Plan 4 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🚀"></div>
+                <h3 class="text-xl font-bold">Camp CrunchLabs - Weekly Subscription (Sold Out)</h3>
+                <p class="mb-4">Join the waitlist to be notified when Camp CrunchLabs returns!</p>
+                <p class="font-size-sm">Limited time offer for weekly STEM challenges and extra Mark Rober videos!</p>
+                <button class="cta-button mt-4 notify-me-btn" type="button" aria-label="Join Waitlist" data-title="Camp CrunchLabs - Weekly Build Box Subscription" data-id="8380393619687">Join Waitlist</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What's Inside Your Build Box?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Build Box Feature 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="📦"></div>
+                <h3 class="text-xl font-bold">Amazing Toys</h3>
+                <p>Each month you'll receive a new build-it-yourself STEM toy to take apart, put back together, and experiment with! </p>
+            </div>
+            <!-- Build Box Feature 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🎥"></div>
+                <h3 class="text-xl font-bold">Mark Rober Videos</h3>
+                <p>Learn from the best! Mark Rober walks you through the science and engineering principles behind each Build Box in an engaging and informative video.</p>
+            </div>
+            <!-- Build Box Feature 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🏆"></div>
+                <h3 class="text-xl font-bold">Platinum Ticket Chance</h3>
+                <p>Each Build Box comes with a chance to win a Platinum Ticket, a trip to CrunchLabs to meet Mark Rober!</p>
+                <p class="font-size-sm">*No Purchase Necessary. Ends 5/31/25. 50 U.S. & D.C., 18+. See <a href="https://www.crunchlabs.com/pages/platinum-ticket-sweepstakes">Official Rules</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Peek Inside Section with Slider -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Peek Inside Your First 12 Build Boxes</h2>
+        <div class="swiper swiper-container carousel feature-slider">
+            <div class="swiper-wrapper">
+                <!-- Slider Item 1 -->
+                <div class="swiper-slide" data-block-id="template--16743438090471__5e6c421a-3d73-42e8-b15b-5816e9f7a43f-1689792908b24c70e4-0">
+                    <div class="feature mx-auto d-flex flex-column">
+                        <div class="feature-number text-dark fw-bolder d-flex align-items-center justify-content-center badge-warning text-center mb-1 mb-md-2 mb-lg-0">
+                            1
+                        </div>
+                        <div class="text-center">
+                            <h4 class="mt-2 mt-md-3 mb-1 mb-md-0 mb-md-2 text-dark text-initial">Disc Launcher</h4>
+                            <div class="fw-medium font-size-lg lh-2 text-dark text-initial features-description">
+                                <p>Learn about flywheels and projectile motion.</p>
+                            </div>
+                        </div>
+                        <div class="feature-img text-center mb-4 mt-2 mb-md-0 mt-md-3">
+                            <img src="//www.crunchlabs.com/cdn/shop/files/CrunchLabs_Product_DISC.png?v=1694047371&amp;width=600" alt="Disc Launcher"
+                                width="150"
+                                height="150" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Item 2 -->
+                <div class="swiper-slide" data-block-id="6319bb3f-d256-46c0-bd30-aa383f7ca017">
+                    <div class="feature mx-auto d-flex flex-column">
+                        <div class="feature-number text-dark fw-bolder d-flex align-items-center justify-content-center badge-warning text-center mb-1 mb-md-2 mb-lg-0">
+                            2
+                        </div>
+                        <div class="text-center">
+                            <h4 class="mt-2 mt-md-3 mb-1 mb-md-0 mb-md-2 text-dark text-initial">Coin Spinner</h4>
+                            <div class="fw-medium font-size-lg lh-2 text-dark text-initial features-description">
+                                <p>Explore ratchets and energy transfer.</p>
+                            </div>
+                        </div>
+                        <div class="feature-img text-center mb-4 mt-2 mb-md-0 mt-md-3">
+                            <img src="//www.crunchlabs.com/cdn/shop/files/CrunchLabs_Product_COIN_1.png?v=1694047809&amp;width=600" alt="Coin Spinner"
+                                width="150"
+                                height="150" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Item 3 -->
+                <div class="swiper-slide" data-block-id="1d94b2ee-8b84-46a5-9eb1-52815396f68b">
+                    <div class="feature mx-auto d-flex flex-column">
+                        <div class="feature-number text-dark fw-bolder d-flex align-items-center justify-content-center badge-warning text-center mb-1 mb-md-2 mb-lg-0">
+                            3
+                        </div>
+                        <div class="text-center">
+                            <h4 class="mt-2 mt-md-3 mb-1 mb-md-0 mb-md-2 text-dark text-initial">Trip Wire</h4>
+                            <div class="fw-medium font-size-lg lh-2 text-dark text-initial features-description">
+                                <p>Discover momentum transfer and how things move!</p>
+                            </div>
+                        </div>
+                        <div class="feature-img text-center mb-4 mt-2 mb-md-0 mt-md-3">
+                            <img src="//www.crunchlabs.com/cdn/shop/files/CrunchLabs_Product_TRIP.png?v=1694047371&amp;width=600" alt="Trip Wire"
+                                width="150"
+                                height="150" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Slider Item 4 -->
+                <div class="swiper-slide" data-block-id="1d94b2ee-8b84-46a5-9eb1-52815396f68b">
+                    <div class="feature mx-auto d-flex flex-column">
+                        <div class="feature-number text-dark fw-bolder d-flex align-items-center justify-content-center badge-warning text-center mb-1 mb-md-2 mb-lg-0">
+                            4
+                        </div>
+                        <div class="text-center">
+                            <h4 class="mt-2 mt-md-3 mb-1 mb-md-0 mb-md-2 text-dark text-initial">Drawing Machine</h4>
+                            <div class="fw-medium font-size-lg lh-2 text-dark text-initial features-description">
+                                <p>Learn about linkages and how they control movement.</p>
+                            </div
