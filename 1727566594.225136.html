@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One-Stop Marketing Toolkit for Event Organizers | EventBoost</title>
+    <meta name="description" content="EventBoost is the one-stop solution for event organizers to effortlessly create engaging social media content from raw event footage.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="One-Stop Marketing Toolkit for Event Organizers | EventBoost">
+    <meta property="og:description" content="EventBoost is the one-stop solution for event organizers to effortlessly create engaging social media content from raw event footage.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Icon Styling using Data Attributes */
+        .service-icon::before,
+        .process-icon::before,
+        .entity-icon::before {
+            content: attr(data-icon);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        /* Specific adjustments for entity icons */
+        .entity-icon::before {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Hide desktop menu on small screens */
+            .desktop-menu {
+                display: none;
+            }
+
+            /* Show mobile menu icon on small screens */
+            .mobile-menu {
+                display: block;
+            }
+
+            .trusted-logo {
+                max-width: 100px;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "EventBoost",
+      "url": "https://yourwebsite.com/",
+      "logo": "https://yourwebsite.com/path-to-logo.png",
+      "sameAs": [
+        "https://www.facebook.com/eventboost",
+        "https://www.twitter.com/eventboost",
+        "https://www.linkedin.com/company/eventboost"
+      ],
+      "description": "EventBoost is the one-stop solution for event organizers to effortlessly create engaging social media content from raw event footage."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <!-- Replace with your logo or brand name -->
+                EventBoost
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#customers">Customers</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-blue-500" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#features" class="block py-2 px-4 text-blue-500">Features</a>
+            <a href="#customers" class="block py-2 px-4 text-blue-500">Customers</a>
+            <a href="#pricing" class="block py-2 px-4 text-blue-500">Pricing</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Effortless Event Marketing with EventBoost</h1>
+            <p class="text-xl md:text-2xl">Turn your event footage into captivating social media content in minutes.</p>
+            <a href="#signup" class="cta-button mt-4">Try EventBoost Free</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Powerful Features for Event Organizers</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🎥"></div>
+                <h3 class="text-xl font-bold">Automated Content Creation</h3>
+                <p>Upload your event footage, and EventBoost will automatically generate short, engaging clips optimized for TikTok, Instagram, LinkedIn, and more.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🎨"></div>
+                <h3 class="text-xl font-bold">Customizable Templates & Branding</h3>
+                <p>Choose from a variety of templates, add your logo and branding elements, and customize the style and tone to match your event identity.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="📈"></div>
+                <h3 class="text-xl font-bold">Social Media Analytics</h3>
+                <p>Track the performance of your generated content and see how your social media strategy is driving engagement and reach.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customers Section -->
+    <section id="customers" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Trusted by Event Organizers Worldwide</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Customer 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="🏫"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">School Event Organizers</h3>
+                    <p>Reach younger audiences with engaging content tailored to their interests, using trendy audio, effects, and hashtags.</p>
+                </div>
+            </div>
+            <!-- Customer 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="💻"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tech Conference Organizers</h3>
+                    <p>Boost sign-ups and conversions with diverse, impactful content that highlights key takeaways and calls to action.</p>
+                </div>
+            </div>
+            <!-- Add more customers as needed -->
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Pricing Plans for Every Event</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Plan 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold mb-4">Free Plan</h3>
+                <p class="text-gray-600">Perfect for getting started and testing EventBoost.</p>
+                <ul class="list-disc mt-4">
+                    <li>Generate up to 5 clips per month</li>
+                    <li>Basic templates and branding options</li>
+                    <li>Access to limited analytics</li>
+                </ul>
+                <a href="#signup" class="cta-button mt-4">Start Free Trial</a>
+            </div>
+            <!-- Plan 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold mb-4">Pro Plan</h3>
+                <p class="text-gray-600">For event organizers with frequent events and a growing social media presence.</p>
+                <ul class="list-disc mt-4">
+                    <li>Unlimited clip generation</li>
+                    <li>Advanced templates and branding options</li>
+                    <li>Detailed analytics and reporting</li>
+                    <li>Priority support</li>
+                </ul>
+                <a href="#signup" class="cta-button mt-4">$49/month</a>
+            </div>
+            <!-- Plan 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold mb-4">Enterprise Plan</h3>
+                <p class="text-gray-600">For large-scale events and teams with complex social media needs.</p>
+                <ul class="list-disc mt-4">
+                    <li>Unlimited clip generation</li>
+                    <li>Custom branding and template development</li>
+                    <li>Dedicated account manager</li>
+                    <li>White-label solutions</li>
+                </ul>
+                <a href="#signup" class="cta-button mt-4">Contact Us for Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Start Growing Your Event Audience Today!</h2>
+        <p class="text-gray-600 mb-8">Sign up for a free trial and experience the power of EventBoost.</p>
+        <form action="https://landing-page-generator-tau.vercel.app/api/v1/subscribe" method="post" class="max-w-md mx-auto px-4">
+            <label for="email" class="sr-only">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded" required>
+            <input type="hidden" id="pageUrlField" name="page_url" value="">
+            <script>
+                document.getElementById("pageUrlField").value = window.location.href;
+            </script>
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Sign Up Free</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 EventBoost. All rights reserved.</p>
+            <p class="mt-4">Made with <a href="https://landing-page-generator-tau.vercel.app" target="_blank" class="text-blue-400">LPG</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</body>
+
+</html>
