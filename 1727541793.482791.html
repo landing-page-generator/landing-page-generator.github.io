@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Multiple Ideas, Fast: [Your Brand] Landing Page Generator</title>
+    <meta name="description" content="Quickly test your business ideas and identify the most promising market fit with [Your Brand]. Generate tailored landing pages for multiple personas with ease.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Validate Multiple Ideas, Fast: [Your Brand] Landing Page Generator">
+    <meta property="og:description" content="Test your business ideas and find product-market fit quickly. Generate tailored landing pages for multiple personas with ease.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://yourwebsite.com/path-to-hero-image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Icon Styling using Data Attributes */
+        .service-icon::before,
+        .process-icon::before,
+        .entity-icon::before {
+            content: attr(data-icon);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        /* Specific adjustments for entity icons */
+        .entity-icon::before {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Hide desktop menu on small screens */
+            .desktop-menu {
+                display: none;
+            }
+
+            /* Show mobile menu icon on small screens */
+            .mobile-menu {
+                display: block;
+            }
+
+            .trusted-logo {
+                max-width: 100px;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "[Your Brand]",
+      "url": "https://yourwebsite.com/",
+      "logo": "https://yourwebsite.com/path-to-logo.png",
+      "sameAs": [
+        "https://www.facebook.com/yourbrand",
+        "https://www.twitter.com/yourbrand",
+        "https://www.linkedin.com/company/yourbrand"
+      ],
+      "description": "Quickly test your business ideas and identify the most promising market fit with [Your Brand]. Generate tailored landing pages for multiple personas with ease."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <!-- Replace with your logo or brand name -->
+                [Your Brand]
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-blue-500" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#features" class="block py-2 px-4 text-blue-500">Features</a>
+            <a href="#benefits" class="block py-2 px-4 text-blue-500">Benefits</a>
+            <a href="#pricing" class="block py-2 px-4 text-blue-500">Pricing</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Validate Multiple Market Hypotheses, Fast!</h1>
+            <p class="text-xl md:text-2xl">Stop guessing and start testing! Generate tailored landing pages for different customer segments and get actionable feedback, all in one place.</p>
+            <a href="#signup" class="cta-button mt-4">Start Your Free Trial</a>
+        </div>
+    </header>
+
+    <!-- Trusted By Section with Security Badge -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Trusted by Growth-Driven Entrepreneurs</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center space-x-0 md:space-x-8 space-y-4 md:space-y-0">
+            <!-- Replace with your client logos -->
+            <img src="https://yourwebsite.com/path-to-client1-logo.png" alt="Client 1" class="trusted-logo">
+            <img src="https://yourwebsite.com/path-to-client2-logo.png" alt="Client 2" class="trusted-logo">
+            <img src="https://yourwebsite.com/path-to-client3-logo.png" alt="Client 3" class="trusted-logo">
+            <img src="https://yourwebsite.com/path-to-client4-logo.png" alt="Client 4" class="trusted-logo">
+        </div>
+        <div class="mt-8 flex justify-center">
+            <img src="https://yourwebsite.com/path-to-security-badge.png" alt="Security Badge" class="trusted-logo">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Create High-Converting Landing Pages, Effortlessly</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🎯"></div>
+                <h3 class="text-xl font-bold">Persona-Based Templates</h3>
+                <p>Choose from a range of pre-designed templates optimized for specific target audiences.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="✍️"></div>
+                <h3 class="text-xl font-bold">Easy Customization</h3>
+                <p>Tailor each template to your unique brand, product, and message with a user-friendly editor.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="📊"></div>
+                <h3 class="text-xl font-bold">Detailed Analytics</h3>
+                <p>Track key metrics like visits, conversions, and form submissions to gain insights into audience engagement.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Experience the Power of Focused Testing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Benefit 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="⏱️"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Save Time and Resources</h3>
+                    <p>Quickly create and deploy multiple landing pages, eliminating the need for manual development.</p>
+                </div>
+            </div>
+            <!-- Benefit 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="💡"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Gain Clearer Insights</h3>
+                    <p>Get data-driven feedback from targeted audiences to validate your hypotheses and make informed decisions.</p>
+                </div>
+            </div>
+            <!-- Benefit 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="📈"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Boost Your Chances of Success</h3>
+                    <p>Identify the most promising market opportunities and focus your efforts where they matter most.</p>
+                </div>
+            </div>
+            <!-- Benefit 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="🚀"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Accelerate Product Development</h3>
+                    <p>Get to market faster with data-backed validation, minimizing risk and wasted effort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Flexible & Affordable Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Plan 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold">Free Plan</h3>
+                <p class="text-gray-500">Perfect for testing the waters</p>
+                <ul class="list-disc text-gray-600">
+                    <li>Limited landing page generation</li>
+                    <li>Basic analytics</li>
+                </ul>
+                <button class="cta-button mt-4">Try Free</button>
+            </div>
+            <!-- Plan 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold">Pro Plan</h3>
+                <p class="text-gray-500">Ideal for multiple hypothesis validation</p>
+                <ul class="list-disc text-gray-600">
+                    <li>Unlimited landing page generation</li>
+                    <li>Advanced analytics</li>
+                    <li>Custom templates</li>
+                </ul>
+                <div class="flex items-center justify-center mt-4">
+                    <span class="text-3xl font-bold">$</span>
+                    <span class="text-5xl font-bold">49</span>
+                    <span class="text-2xl font-bold">/month</span>
+                </div>
+                <button class="cta-button mt-4">Get Started</button>
+            </div>
+            <!-- Plan 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 class="text-xl font-bold">Enterprise Plan</h3>
+                <p class="text-gray-500">Scalable solutions for rapid growth</p>
+                <ul class="list-disc text-gray-600">
+                    <li>Dedicated account manager</li>
+                    <li>Custom branding and integration</li>
+                    <li>Advanced reporting and insights</li>
+                </ul>
+                <button class="cta-button mt-4">Contact Us</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="https://yourwebsite.com/path-to-client1-image.jpg" alt="Alex Johnson" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"[Your Brand] saved me so much time and helped me find the right market for my product. I highly recommend it to any entrepreneur!"</p>
+                <p class="font-bold">Alex Johnson, Founder of [Company Name]</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="https://yourwebsite.com/path-to-client2-image.jpg" alt="Maria Garcia" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"The insights I gained from testing different personas with [Your Brand] were invaluable. It helped me refine my product and focus my marketing efforts."</p>
+                <p class="font-bold">Maria Garcia, Founder of [Company Name]</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Ready to Validate Your Ideas and Grow Your Business?</h2>
+        <p class="text-gray-600 mb-8">Get started with your free trial today and discover the power of focused market testing!</p>
+        <form action="https://landing-page-generator-tau.vercel.app/api/v1/subscribe" method="post" class="max-w-md mx-auto px-4">
+            <label for="email" class="sr-only">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded" required>
+            <input type="hidden" id="pageUrlField" name="page_url" value="">
+            <script>
+                document.getElementById("pageUrlField").value = window.location.href;
+            </script>
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Start Free Trial</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 [Your Brand]. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="/privacy-policy" class="mx-2 hover:text-blue-400">Privacy Policy</a>
+                <a href="/terms-of-service" class="mx-2 hover:text-blue-400">Terms of Service</a>
+                <a href="/faq" class="mx-2 hover:text-blue-400">FAQ</a>
+            </div>
+            <p class="mt-4">Made with <a href="https://landing-page-generator-tau.vercel.app" target="_blank" class="text-blue-400">LPG</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Optional Sticky CTA -->
+    <!--
+    <div class="sticky-cta fixed bottom-4 right-4">
+        <a href="#signup" class="px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Get Started</a>
+    </div>
+    -->
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</body>
+
+</html>
