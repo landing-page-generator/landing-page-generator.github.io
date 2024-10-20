@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Creative Oasis Awaits: [Coffee Shop Name]</title>
+    <meta name="description" content="Find your perfect workspace at [Coffee Shop Name], a cozy cafe with delicious coffee, reliable wifi, and a welcoming atmosphere.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Your Creative Oasis Awaits: [Coffee Shop Name]">
+    <meta property="og:description" content="Find your perfect workspace at [Coffee Shop Name], a cozy cafe with delicious coffee, reliable wifi, and a welcoming atmosphere.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://images.unsplash.com/photo-1500648767791-004cc166e192?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Icon Styling using Data Attributes */
+        .service-icon::before,
+        .process-icon::before,
+        .entity-icon::before {
+            content: attr(data-icon);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        /* Specific adjustments for entity icons */
+        .entity-icon::before {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Hide desktop menu on small screens */
+            .desktop-menu {
+                display: none;
+            }
+
+            /* Show mobile menu icon on small screens */
+            .mobile-menu {
+                display: block;
+            }
+
+            .trusted-logo {
+                max-width: 100px;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "[Coffee Shop Name]",
+      "url": "https://yourwebsite.com/",
+      "logo": "https://yourwebsite.com/path-to-logo.png",
+      "sameAs": [
+        "https://www.facebook.com/yourbrand",
+        "https://www.twitter.com/yourbrand",
+        "https://www.linkedin.com/company/yourbrand"
+      ],
+      "description": "Escape the ordinary and experience the extraordinary at [Coffee Shop Name]. We offer the finest coffee, cozy atmosphere, and delicious treats to fuel your day."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <!-- Replace with your logo or brand name -->
+                [Coffee Shop Name]
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-blue-500" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#menu" class="block py-2 px-4 text-blue-500">Menu</a>
+            <a href="#location" class="block py-2 px-4 text-blue-500">Location</a>
+            <a href="#about" class="block py-2 px-4 text-blue-500">About</a>
+            <a href="#gallery" class="block py-2 px-4 text-blue-500">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Your Creative Oasis Awaits</h1>
+            <p class="text-xl md:text-2xl">Cozy Atmosphere, Delicious Coffee, Reliable Wifi</p>
+            <a href="#menu" class="cta-button mt-4">Discover Our Menu</a>
+        </div>
+    </header>
+
+    <!-- Menu Section -->
+    <section id="menu" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Delicious Menu</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Item 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="☕"></div>
+                <h3 class="text-xl font-bold">Specialty Coffee</h3>
+                <p>Experience the art of coffee with our expertly crafted blends and single-origin brews.</p>
+                <ul class="list-disc pl-6">
+                    <li>Latte</li>
+                    <li>Cappuccino</li>
+                    <li>Espresso</li>
+                    <li>Americano</li>
+                </ul>
+            </div>
+            <!-- Item 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🍰"></div>
+                <h3 class="text-xl font-bold">Pastries & Treats</h3>
+                <p>Indulge in our selection of freshly baked pastries and delectable treats.</p>
+                <ul class="list-disc pl-6">
+                    <li>Croissants</li>
+                    <li>Muffins</li>
+                    <li>Cookies</li>
+                    <li>Brownies</li>
+                </ul>
+            </div>
+            <!-- Item 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🥪"></div>
+                <h3 class="text-xl font-bold">Sandwiches & Salads</h3>
+                <p>Fuel your day with our selection of fresh sandwiches and healthy salads.</p>
+                <ul class="list-disc pl-6">
+                    <li>Paninis</li>
+                    <li>Wraps</li>
+                    <li>Salads</li>
+                    <li>Soups</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Find Us</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center space-x-0 md:space-x-8 space-y-4 md:space-y-0">
+            <div class="w-full md:w-1/2">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2422.544652782598!2d-74.00601508472239!3d40.71282437933636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258f5f181c651%3A0xa053a00d467d6f27!2s[Coffee Shop Name]!5e0!3m2!1sen!2sus!4v1700289097452!5m2!1sen!2sus"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="w-full md:w-1/2 md:ml-8 mt-8 md:mt-0">
+                <h3>[Coffee Shop Name]</h3>
+                <p>[Your Coffee Shop Address]</p>
+                <p>Phone: [Your Phone Number]</p>
+                <p>Email: [Your Email Address]</p>
+                <p>Hours: [Your Coffee Shop Hours]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">About [Coffee Shop Name]</h2>
+        <p class="text-lg leading-relaxed">
+            [Your coffee shop's story, mission, values, and what sets you apart. Highlight the passion behind your coffee and the welcoming atmosphere you create.]
+        </p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Atmosphere</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Image 1 -->
+            <div>
+                <img src="https://images.unsplash.com/photo-1583127154625-787a9195a83f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                    alt="Coffee Shop Interior" class="w-full rounded-lg shadow-lg">
+            </div>
+            <!-- Image 2 -->
+            <div>
+                <img src="https://images.unsplash.com/photo-1580245937957-d17f616f5082?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                    alt="Coffee Shop Exterior" class="w-full rounded-lg shadow-lg">
+            </div>
+            <!-- Image 3 -->
+            <div>
+                <img src="https://images.unsplash.com/photo-1523713088274-695a40a8c8c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80"
+                    alt="Coffee and Pastries" class="w-full rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="cta" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Ready to Experience the Difference?</h2>
+        <p class="text-gray-600 mb-8">Visit us today and let us brew you a cup of happiness!</p>
+        <a href="#location" class="cta-button">Find Our Location</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 [Coffee Shop Name]. All rights reserved.</p>
+            <div class="footer-links mt-4">
+                <a href="https://www.facebook.com/yourbrand" target="_blank">Facebook</a>
+                <a href="https://www.twitter.com/yourbrand" target="_blank">Twitter</a>
+                <a href="https://www.instagram.com/yourbrand" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</body>
+
+</html>
