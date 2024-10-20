@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Your Way: Personalized AI Fashion Stylist</title>
+    <meta name="description" content="Discover Style Your Way, the AI-powered fashion stylist that analyzes your wardrobe, predicts trends, and creates custom outfits based on your unique style.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Style Your Way: Personalized AI Fashion Stylist">
+    <meta property="og:description" content="Discover Style Your Way, the AI-powered fashion stylist that analyzes your wardrobe, predicts trends, and creates custom outfits based on your unique style.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://images.pexels.com/photos/4945044/pexels-photo-4945044.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Icon Styling using Data Attributes */
+        .service-icon::before,
+        .process-icon::before,
+        .entity-icon::before {
+            content: attr(data-icon);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        /* Specific adjustments for entity icons */
+        .entity-icon::before {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Hide desktop menu on small screens */
+            .desktop-menu {
+                display: none;
+            }
+
+            /* Show mobile menu icon on small screens */
+            .mobile-menu {
+                display: block;
+            }
+
+            .trusted-logo {
+                max-width: 100px;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Style Your Way",
+      "url": "https://yourwebsite.com/",
+      "logo": "https://yourwebsite.com/path-to-logo.png",
+      "sameAs": [
+        "https://www.facebook.com/styleyourway",
+        "https://www.twitter.com/styleyourway",
+        "https://www.linkedin.com/company/styleyourway"
+      ],
+      "description": "Discover Style Your Way, the AI-powered fashion stylist that analyzes your wardrobe, predicts trends, and creates custom outfits based on your unique style."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                Style Your Way
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#howitworks">How It Works</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#signup">Get Started</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-blue-500" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#features" class="block py-2 px-4 text-blue-500">Features</a>
+            <a href="#howitworks" class="block py-2 px-4 text-blue-500">How It Works</a>
+            <a href="#testimonials" class="block py-2 px-4 text-blue-500">Testimonials</a>
+            <a href="#signup" class="block py-2 px-4 text-blue-500">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Style Your Way: Your Personal AI Fashion Stylist</h1>
+            <p class="text-xl md:text-2xl">Discover the future of fashion styling with AI-powered outfit recommendations tailored to your unique preferences.</p>
+            <a href="#signup" class="cta-button mt-4">Try It Free</a>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Effortless Style, Personalized to You</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="👚"></div>
+                <h3 class="text-xl font-bold">Wardrobe Analysis</h3>
+                <p>Upload your existing wardrobe, and our AI will analyze your style and preferences.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🔮"></div>
+                <h3 class="text-xl font-bold">Trend Prediction</h3>
+                <p>Stay ahead of the curve with our AI-powered trend insights, tailored to your style.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="✨"></div>
+                <h3 class="text-xl font-bold">Custom Outfit Creation</h3>
+                <p>Get personalized outfit recommendations, based on your wardrobe and preferences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="howitworks" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">How It Works</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="process-step">
+                <div class="process-icon" data-icon="📸"></div>
+                <h3 class="text-xl font-bold">1. Take a Style Quiz</h3>
+                <p>Tell us about your fashion preferences, style icons, and favorite looks.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="process-step">
+                <div class="process-icon" data-icon="🧠"></div>
+                <h3 class="text-xl font-bold">2. Upload Your Wardrobe</h3>
+                <p>Add photos of your clothes, so our AI can learn your style.</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="process-step">
+                <div class="process-icon" data-icon="✨"></div>
+                <h3 class="text-xl font-bold">3. Get Personalized Outfit Recommendations</h3>
+                <p>Receive curated outfits that flatter your figure and reflect your personal style.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Fashionistas Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="https://yourwebsite.com/path-to-client1-image.jpg" alt="Sarah Jones" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"Style Your Way has revolutionized my mornings! It takes the guesswork out of getting dressed and always makes me feel confident."</p>
+                <p class="font-bold">Sarah Jones, Fashion Blogger</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="https://yourwebsite.com/path-to-client2-image.jpg" alt="David Lee" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"I'm not a fashion expert, but Style Your Way helps me create amazing outfits that make me feel great."</p>
+                <p class="font-bold">David Lee, Business Professional</p>
+            </div>
+            <!-- Add more testimonials as needed -->
+        </div>
+    </section>
+
+    <!-- Sign-up Section -->
+    <section id="signup" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Start Styling Your Way</h2>
+        <p class="text-gray-600 mb-8">Join our community of fashion-forward individuals and unlock a world of personalized style.</p>
+        <form action="https://landing-page-generator-tau.vercel.app/api/v1/subscribe" method="post" class="max-w-md mx-auto px-4">
+            <label for="email" class="sr-only">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full px-4 py-2 mb-4 border rounded" required>
+            <input type="hidden" id="pageUrlField" name="page_url" value="">
+            <script>
+                document.getElementById("pageUrlField").value = window.location.href;
+            </script>
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Get Started</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Style Your Way. All rights reserved.</p>
+            <p class="mt-4">Made with <a href="https://landing-page-generator-tau.vercel.app" target="_blank" class="text-blue-400">LPG</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</body>
+
+</html>
