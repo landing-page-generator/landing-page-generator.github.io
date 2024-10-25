@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolutionize Your IVR with Cosmoque's Generative Voice AI</title>
+    <meta name="description" content="Say goodbye to clunky IVR systems. Cosmoque's generative voice AI brings a human touch to your automated interactions, improving customer satisfaction and boosting efficiency.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Revolutionize Your IVR with Cosmoque's Generative Voice AI">
+    <meta property="og:description" content="Say goodbye to clunky IVR systems. Cosmoque's generative voice AI brings a human touch to your automated interactions, improving customer satisfaction and boosting efficiency.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://images.pexels.com/photos/6217820/pexels-photo-6217820.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Icon Styling using Data Attributes */
+        .service-icon::before,
+        .process-icon::before,
+        .entity-icon::before {
+            content: attr(data-icon);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        /* Specific adjustments for entity icons */
+        .entity-icon::before {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Hide desktop menu on small screens */
+            .desktop-menu {
+                display: none;
+            }
+
+            /* Show mobile menu icon on small screens */
+            .mobile-menu {
+                display: block;
+            }
+
+            .trusted-logo {
+                max-width: 100px;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cosmoque",
+      "url": "https://yourwebsite.com/",
+      "logo": "https://yourwebsite.com/path-to-logo.png",
+      "sameAs": [
+        "https://www.facebook.com/cosmoque",
+        "https://www.twitter.com/cosmoque",
+        "https://www.linkedin.com/company/cosmoque"
+      ],
+      "description": "Revolutionize your IVR with Cosmoque's generative voice AI. Experience a human touch in automated interactions."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                <!-- Replace with your logo or brand name -->
+                Cosmoque
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#benefits">Benefits</a></li>
+                <li><a href="#demo">Request Demo</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-blue-500" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#features" class="block py-2 px-4 text-blue-500">Features</a>
+            <a href="#benefits" class="block py-2 px-4 text-blue-500">Benefits</a>
+            <a href="#demo" class="block py-2 px-4 text-blue-500">Request Demo</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Humanize Your IVR with Generative Voice AI</h1>
+            <p class="text-xl md:text-2xl">Cosmoque's AI creates natural, engaging interactions that enhance customer satisfaction and drive results.</p>
+            <a href="#demo" class="cta-button mt-4">Request a Demo</a>
+        </div>
+    </header>
+
+    <!-- Trusted By Section -->
+    <section class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Trusted by Leading Businesses</h2>
+        <div class="flex flex-col md:flex-row justify-center items-center space-x-0 md:space-x-8 space-y-4 md:space-y-0">
+            <!-- Replace with your client logos -->
+            <img src="https://yourwebsite.com/path-to-client1-logo.png" alt="Client 1" class="trusted-logo">
+            <img src="https://yourwebsite.com/path-to-client2-logo.png" alt="Client 2" class="trusted-logo">
+            <img src="https://yourwebsite.com/path-to-client3-logo.png" alt="Client 3" class="trusted-logo">
+            <img src="https://yourwebsite.com/path-to-client4-logo.png" alt="Client 4" class="trusted-logo">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Cosmoque's Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🗣️"></div>
+                <h3 class="text-xl font-bold">Natural Voice Generation</h3>
+                <p>Create realistic and engaging voices that sound like real people, improving customer experience.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🤖"></div>
+                <h3 class="text-xl font-bold">Customizable Personas</h3>
+                <p>Craft unique voice personalities tailored to your brand and target audience.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🌐"></div>
+                <h3 class="text-xl font-bold">Multilingual Support</h3>
+                <p>Reach a wider audience with AI voices in multiple languages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Benefits of Cosmoque's IVR</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Benefit 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="📈"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Increased Customer Satisfaction</h3>
+                    <p>Reduce frustration and improve caller satisfaction with natural, conversational IVR interactions.</p>
+                </div>
+            </div>
+            <!-- Benefit 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="⏱️"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Enhanced Efficiency</h3>
+                    <p>Automate routine tasks and reduce call handling time, freeing up your team to focus on more complex issues.</p>
+                </div>
+            </div>
+            <!-- Benefit 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="💰"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Cost Savings</h3>
+                    <p>Reduce operational expenses by streamlining your IVR process and improving customer self-service.</p>
+                </div>
+            </div>
+            <!-- Benefit 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg flex items-start">
+                <div class="entity-icon mr-4" data-icon="🚀"></div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Competitive Advantage</h3>
+                    <p>Stay ahead of the curve with an innovative IVR solution that differentiates your business.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Experience the Difference</h2>
+        <p class="text-gray-600 text-center mb-8">See how Cosmoque's generative voice AI can transform your IVR. Request a personalized demo today!</p>
+        <div class="flex justify-center">
+            <a href="#demo" class="cta-button mt-4">Request a Demo</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Cosmoque. All rights reserved.</p>
+            <p class="mt-4">Made with <a href="https://landing-page-generator-tau.vercel.app" target="_blank" class="text-blue-400">LPG</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</body>
+
+</html>
