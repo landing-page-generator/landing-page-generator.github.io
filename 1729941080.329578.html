@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enable Notifications for Google Updates</title>
+    <meta name="description" content="Get instant updates from Google! Allow desktop notifications to stay informed about news, events, and more.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Enable Notifications for Google Updates">
+    <meta property="og:description" content="Get instant updates from Google! Allow desktop notifications to stay informed about news, events, and more.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #50E3C2;
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://www.freepik.com/free-photos-vectors/background') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Icon Styling using Data Attributes */
+        .service-icon::before,
+        .process-icon::before,
+        .entity-icon::before {
+            content: attr(data-icon);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            display: block;
+        }
+
+        /* Specific adjustments for entity icons */
+        .entity-icon::before {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .process-step {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .client-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        .trusted-logo {
+            max-width: 120px;
+            height: auto;
+            margin: 1rem;
+            filter: grayscale(100%);
+            transition: filter 0.3s ease;
+        }
+
+        .trusted-logo:hover {
+            filter: grayscale(0%);
+        }
+
+        footer {
+            background-color: #1a202c;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            /* Hide desktop menu on small screens */
+            .desktop-menu {
+                display: none;
+            }
+
+            /* Show mobile menu icon on small screens */
+            .mobile-menu {
+                display: block;
+            }
+
+            .trusted-logo {
+                max-width: 100px;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Google Notifications",
+      "url": "https://yourwebsite.com/",
+      "logo": "https://yourwebsite.com/path-to-logo.png",
+      "sameAs": [
+        "https://www.facebook.com/yourbrand",
+        "https://www.twitter.com/yourbrand",
+        "https://www.linkedin.com/company/yourbrand"
+      ],
+      "description": "Get instant updates from Google! Allow desktop notifications to stay informed about news, events, and more."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Stay Informed with Google Updates!</h1>
+            <p class="text-xl md:text-2xl">Enable desktop notifications and never miss a beat!</p>
+            <a href="https://www.google.com/" class="cta-button mt-4">Allow Notifications Now</a>
+        </div>
+    </header>
+
+    <!-- About Section with Video -->
+    <section id="introduction" class="container mx-auto my-12 p-6 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+            <h2 class="text-3xl font-bold mb-4">Why Enable Notifications?</h2>
+            <p class="text-lg leading-relaxed">
+                Stay on top of the latest news, events, and updates from Google. Whether it's breaking news, important announcements, or reminders for your favorite events, notifications ensure you never miss out.
+            </p>
+        </div>
+        <div class="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+            <video controls class="rounded-lg shadow-lg w-full">
+                <source src="https://yourwebsite.com/path-to-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Benefits of Enabling Notifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Benefit 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🔔"></div>
+                <h3 class="text-xl font-bold">Stay Informed</h3>
+                <p>Never miss out on important updates, announcements, or breaking news.</p>
+            </div>
+            <!-- Benefit 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="⏱️"></div>
+                <h3 class="text-xl font-bold">Timely Reminders</h3>
+                <p>Get timely reminders for upcoming events, deadlines, and important tasks.</p>
+            </div>
+            <!-- Benefit 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="📈"></div>
+                <h3 class="text-xl font-bold">Stay Ahead</h3>
+                <p>Be the first to know about new features, product launches, and exciting developments from Google.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How-to Section -->
+    <section id="howto" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">How to Enable Notifications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Step 1 -->
+            <div class="process-step">
+                <div class="process-icon" data-icon="🌐"></div>
+                <h3 class="text-xl font-bold">1. Visit Google</h3>
+                <p>Open your Google browser or visit any Google service like Gmail, YouTube, or Search.</p>
+            </div>
+            <!-- Step 2 -->
+            <div class="process-step">
+                <div class="process-icon" data-icon="🔔"></div>
+                <h3 class="text-xl font-bold">2. Notification Prompt</h3>
+                <p>You'll see a prompt asking if you want to allow notifications. Click "Allow" or "Yes".</p>
+            </div>
+            <!-- Step 3 -->
+            <div class="process-step">
+                <div class="process-icon" data-icon="✅"></div>
+                <h3 class="text-xl font-bold">3. You're Done!</h3>
+                <p>That's it! You'll now receive notifications directly from Google.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Google. All rights reserved.</p>
+            <p class="mt-4">Made with <a href="https://landing-page-generator-tau.vercel.app" target="_blank" class="text-blue-400">LPG</a>.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</body>
+
+</html>
