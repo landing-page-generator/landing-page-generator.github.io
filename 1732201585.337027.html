@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unforgettable Moroccan School Trip | Educational Adventures</title>
+    <meta name="description" content="Experience the magic of Morocco on an enriching school trip! Educational Adventures offers unforgettable cultural immersion, historical exploration, and adventure.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Unforgettable Moroccan School Trip | Educational Adventures">
+    <meta property="og:description" content="Experience the magic of Morocco on an enriching school trip! Educational Adventures offers unforgettable cultural immersion, historical exploration, and adventure.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #D97706; /* Orange - evokes warmth and adventure */
+            --secondary-color: #50E3C2; /* Teal - complements orange, feels refreshing */
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B; /* Red - for a call to action */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://images.pexels.com/photos/8083818/pexels-photo-8083818.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        /* ...rest of the styles remain the same... */
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalEvent",
+      "name": "Moroccan School Trip",
+      "description": "An enriching school trip to Morocco, offering cultural immersion, historical exploration, and adventure.",
+      "location": {
+        "@type": "Place",
+        "name": "Morocco"
+      },
+      "startDate": "[Start Date]",
+      "endDate": "[End Date]",
+      "organizer": {
+        "@type": "Organization",
+        "name": "Educational Adventures"
+      }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                Educational Adventures
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#itinerary">Itinerary</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-blue-500" aria-label="Toggle navigation menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#itinerary" class="block py-2 px-4 text-blue-500">Itinerary</a>
+            <a href="#testimonials" class="block py-2 px-4 text-blue-500">Testimonials</a>
+            <a href="#contact" class="block py-2 px-4 text-blue-500">Contact Us</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Discover the Magic of Morocco!</h1>
+            <p class="text-xl md:text-2xl">An unforgettable school trip filled with culture, history, and adventure.</p>
+            <a href="#contact" class="cta-button mt-4">Request Information</a>
+        </div>
+    </header>
+
+
+    <!-- Itinerary Section -->
+    <section id="itinerary" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">A Sample Itinerary</h2>
+        <p>This is a sample itinerary, customizable to your needs.  Contact us for a personalized plan.</p>
+        <ul>
+            <li><strong>Day 1:</strong> Arrival in Marrakech, explore the Djemaa el-Fna square.</li>
+            <li><strong>Day 2:</strong> Visit the Bahia Palace and Saadian Tombs, learn about Moroccan history.</li>
+            <li><strong>Day 3:</strong>  Cooking class, experiencing Moroccan cuisine and culture.</li>
+            <li><strong>Day 4:</strong>  Explore the Atlas Mountains, enjoy breathtaking views and optional hiking.</li>
+            <li><strong>Day 5:</strong> Departure.</li>
+        </ul>
+    </section>
+
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What They're Saying</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <p class="italic mb-4">"The Moroccan school trip was an incredible experience! The students learned so much and had so much fun."</p>
+                <p class="font-bold">Ms. Johnson, Teacher, Oakwood High School</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <p class="italic mb-4">"My students still talk about their trip to Morocco. It was truly a life-changing experience."</p>
+                <p class="font-bold">Mr. Davis, Teacher, Westview Middle School</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Let's Plan Your Adventure!</h2>
+        <p class="text-gray-600 mb-8">Contact us to discuss your school trip to Morocco.</p>
+        <form action="mailto:info@educationaladventures.com" method="post" class="max-w-md mx-auto px-4">
+            <label for="name" class="sr-only">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" class="w-full px-4 py-2 mb-4 border rounded" required>
+            <label for="email" class="sr-only">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email Address" class="w-full px-4 py-2 mb-4 border rounded" required>
+            <label for="message" class="sr-only">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" class="w-full px-4 py-2 mb-4 border rounded" rows="5" required></textarea>
+            <button type="submit" class="w-full px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition duration-300">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Educational Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</body>
+
+</html>
