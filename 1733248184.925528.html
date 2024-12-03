@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Kids Knitted Wool Sweaters</title>
+    <meta name="description" content="Shop adorable, handcrafted knitted wool sweaters for kids.  Made with the finest materials for warmth and comfort.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Cozy Kids Knitted Wool Sweaters">
+    <meta property="og:description" content="Shop adorable, handcrafted knitted wool sweaters for kids. Made with the finest materials for warmth and comfort.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #E78EA5; /* A soft pink */
+            --secondary-color: #A7D1AB; /* A soft green */
+            --text-color: #333;
+            --background-color: #F8F9FA;
+            --accent-color: #FF6B6B; /* A slightly brighter pink for contrast */
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://images.pexels.com/photos/3889819/pexels-photo-3889819.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ...rest of the CSS remains the same... */
+
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Cozy Kids Knitwear",
+      "url": "https://yourwebsite.com/",
+      "logo": "https://yourwebsite.com/path-to-logo.png",
+      "description": "Handcrafted knitted wool sweaters for kids."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                Cozy Kids Knitwear
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#shop">Shop Now</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <!-- ...mobile menu remains the same... -->
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <!-- ...mobile menu remains the same... -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Adorable Knitted Wool Sweaters for Your Little Ones</h1>
+            <p class="text-xl md:text-2xl">Handcrafted with love, for ultimate warmth and style.</p>
+            <a href="#shop" class="cta-button mt-4">Shop Now</a>
+        </div>
+    </header>
+
+
+    <!-- Features/Benefits Section -->
+    <section id="features" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Why Choose Our Knitted Wool Sweaters?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🧶"></div>
+                <h3 class="text-xl font-bold">Super Soft Wool</h3>
+                <p>Made with the softest, most comfortable wool for delicate skin.</p>
+            </div>
+            <!-- Feature 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="💖"></div>
+                <h3 class="text-xl font-bold">Adorable Designs</h3>
+                <p>Unique and charming designs your child will love.</p>
+            </div>
+            <!-- Feature 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="service-icon" data-icon="🧤"></div>
+                <h3 class="text-xl font-bold">Handcrafted Quality</h3>
+                <p>Each sweater is lovingly handcrafted with attention to detail.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Happy Parents, Happy Kids</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="https://yourwebsite.com/path-to-client1-image.jpg" alt="Parent 1" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"My daughter loves her new sweater! It's so soft and cozy."</p>
+                <p class="font-bold">Sarah Miller</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                <img src="https://yourwebsite.com/path-to-client2-image.jpg" alt="Parent 2" class="client-image mx-auto mb-4">
+                <p class="italic mb-4">"The quality of these sweaters is amazing.  They're built to last!"</p>
+                <p class="font-bold">John Smith</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Now Section -->
+    <section id="shop" class="text-center py-12 bg-blue-100">
+        <h2 class="text-3xl font-bold mb-4">Shop Our Collection Now!</h2>
+        <a href="#" class="cta-button mt-4">Browse Sweaters</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <!-- ...footer remains the same... -->
+    </footer>
+
+    <!-- ...scripts remain the same... -->
+</body>
+
+</html>
