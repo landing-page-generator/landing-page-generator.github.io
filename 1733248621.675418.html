@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJ Collection: Hand-Knitted Wool Sweaters for Kids</title>
+    <meta name="description" content="Discover AJ Collection's beautiful, hand-knitted wool sweaters for kids. Made with love and the finest 100% wool, offering warmth, comfort, and style.">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="AJ Collection: Hand-Knitted Wool Sweaters for Kids">
+    <meta property="og:description" content="Discover AJ Collection's beautiful, hand-knitted wool sweaters for kids. Made with love and the finest 100% wool.">
+    <meta property="og:image" content="https://yourwebsite.com/path-to-hero-image.jpg">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon -->
+    <link rel="icon" href="/path-to-favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/path-to-favicon.png" type="image/png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        :root {
+            --primary-color: #A0522D; /*Sienna*/
+            --secondary-color: #DEB887; /*Burlywood*/
+            --text-color: #333;
+            --background-color: #F5F5DC; /*Beige*/
+            --accent-color: #FF6B6B; /*Coral*/
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        .hero-background {
+            background: url('https://images.pexels.com/photos/3889819/pexels-photo-3889819.jpeg') no-repeat center center;
+            background-size: cover;
+            height: 80vh; /*Reduced height for better mobile experience*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-background > div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .text-shadow-strong {
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4f4f;
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ...rest of the CSS remains largely the same... */
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "AJ Collection",
+      "url": "https://yourwebsite.com/",
+      "logo": "https://yourwebsite.com/path-to-logo.png",
+      "description": "Hand-knitted wool sweaters for kids, made with love and the finest 100% wool."
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white py-4 shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="logo">
+                AJ Collection
+            </div>
+            <ul class="desktop-menu flex space-x-4">
+                <li><a href="#product-showcase">Sweaters</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu md:hidden">
+                <button id="menu-toggle" class="text-blue-500" aria-label="Toggle navigation menu">
+                    <!-- Hamburger icon -->
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu-items" class="hidden bg-white w-full">
+            <a href="#product-showcase" class="block py-2 px-4 text-blue-500">Sweaters</a>
+            <a href="#about" class="block py-2 px-4 text-blue-500">About Us</a>
+            <a href="#testimonials" class="block py-2 px-4 text-blue-500">Testimonials</a>
+            <a href="#contact" class="block py-2 px-4 text-blue-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-background">
+        <div>
+            <h1 class="text-4xl md:text-6xl text-shadow-strong">Wrap Your Little One in Comfort & Style</h1>
+            <p class="text-xl md:text-2xl">Soft, Warm, and 100% Wool.</p>
+            <a href="#product-showcase" class="cta-button mt-4">Shop Now</a>
+        </div>
+    </header>
+
+    <!-- Product Showcase Section -->
+    <section id="product-showcase" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Our Best-Selling Sweaters</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="https://yourwebsite.com/path-to-product1-image.jpg" alt="Sweater 1" class="mb-4">
+                <h3 class="text-xl font-bold">Cozy Cardigan</h3>
+                <p>A classic cardigan in soft, warm wool.</p>
+                <a href="#" class="cta-button">Shop Now</a>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="https://yourwebsite.com/path-to-product2-image.jpg" alt="Sweater 2" class="mb-4">
+                <h3 class="text-xl font-bold">Rainbow Jumper</h3>
+                <p>A vibrant jumper with a playful rainbow design.</p>
+                <a href="#" class="cta-button">Shop Now</a>
+            </div>
+            <!-- Product 3 -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img src="https://yourwebsite.com/path-to-product3-image.jpg" alt="Sweater 3" class="mb-4">
+                <h3 class="text-xl font-bold">Fair Isle Pullover</h3>
+                <p>A traditional Fair Isle design in classic colors.</p>
+                <a href="#" class="cta-button">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About AJ Collection Section -->
+    <section id="about" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">About AJ Collection</h2>
+        <p>AJ Collection creates beautiful, hand-knitted wool sweaters for kids using only the finest 100% wool.  Each sweater is lovingly crafted with meticulous attention to detail, ensuring both warmth and style. We are committed to sustainable and ethical production practices.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">What Our Customers Say</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Testimonial 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="italic mb-4">"My daughter absolutely loves her new AJ Collection sweater! It's so soft and warm, and the quality is exceptional."</p>
+                <p class="font-bold">Sarah Miller</p>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <p class="italic mb-4">"The craftsmanship of these sweaters is amazing.  They're truly unique and special pieces that my son will cherish for years to come."</p>
+                <p class="font-bold">John Davis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="container mx-auto my-12 p-6 text-center">
+        <h2 class="text-3xl font-bold mb-4">Explore Our Full Collection</h2>
+        <p>Free Shipping on Your First Order!</p> <a href="#" class="cta-button mt-4">Explore Our Collection</a>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto my-12 p-6">
+        <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+        <p class="text-center mb-4">Have questions?  We'd love to hear from you!</p>
+        <a href="https://wa.me/919811113329?text=I%20am%20interested%20in%20buying%20a%20hand-knitted%20sweater%20for%20my%20child." class="cta-button mx-auto block">Contact via WhatsApp</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 AJ Collection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu-items');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    <!-- Google Analytics (replace with your tracking ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'YOUR_TRACKING_ID');
+    </script>
+</body>
+
+</html>
